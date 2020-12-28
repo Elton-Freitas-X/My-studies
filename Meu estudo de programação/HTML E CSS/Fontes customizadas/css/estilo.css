@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "adripping";
+    src: url(../fontes/adrippingmarker.woff)
+}
+
+@font-face {
+    font-family: "ancient";
+    src: url(../fontes/Ancient-Medium.woff)
+}
+
+h1 {
+    font-size: 6em;
+    font-family: "ancient";
+}
+

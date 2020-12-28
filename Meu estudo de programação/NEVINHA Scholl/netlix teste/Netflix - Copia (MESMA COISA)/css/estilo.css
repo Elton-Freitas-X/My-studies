@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'netflix_sansbold';
+    src: url('../fontes/netflix_sans_bold-webfont.woff2') format('woff2'),
+         url('../fontes/netflix_sans_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h3, p {
+    color: #fff;
+}
+
+body {
+    background-color: black;
+    font-family: 'netflix_sansbold';
+}
+
+
+
+.navegacao-geral {
+    width: 100%;
+    background-color: rgb(15, 14, 14);
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    text-transform: uppercase;
+    z-index: 10;
+
+}
+
+.navegacao-left {
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+}
+
+.navegacao-left a img {
+    margin-left: 50px;
+}
+
+.navegacao-right {
+    color: #FFF;
+    font-size: 15px;
+}
+
+.ul li.mov {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    margin: 6px;
+}
+
+.ul li {
+    margin: 8px;
+}
+
+.ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.ul li a:hover {
+    text-decoration: none;
+    color: rgb(163, 170, 163);
+    transition: 1s;
+}
+
+.radius {
+    border-radius: 25%;
+}
+
+li.mova+li {
+    margin-right: 50px;
+    margin-left: -4px;
+}
+
+nav h1 {
+    color: red;
+}
+
+
+
+
+
+.conteudo {
+    content: "";
+    width: 100%;
+    height: 100%; 
+    background-color: #000;  
+    z-index: 1;
+    border: 1px solid red;
+}/*isso aqui nao pega*/
+
+.conteudo figure>img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.conteudo figcaption {
+    position: absolute;
+    top: 7vw;
+    z-index: 2;
+    width: 100%;
+    padding: 0 60px;
+    margin-top: 200px;
+}
+
+.conteudo figcaption img {
+    margin-left: 50px;
+    width: 35%;
+    margin-top: -70px;
+}
+
+a.assistir {
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5%;   
+}
+
+a.info {
+    text-decoration: none;
+    background-color: rgba(196, 186, 186, 0.5);
+    color: #fff;
+    border-radius: 5%;
+}
+
+.aboutmovie a.assistir {
+    padding: 9px;
+}
+
+.aboutmovie {
+    min-width: 296px;
+}
+
+.aboutmovie a.info {
+    padding: 10px;
+}
+
+.aboutmovie i {
+    padding-right: 10px;
+}
+
+a.assistir:hover {
+   background-color: rgb(196, 186, 186);   
+}
+
+a.info:hover {
+    background-color: rgba(83, 81, 81, 0.7);
+}
+

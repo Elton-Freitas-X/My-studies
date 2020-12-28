@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/7867605181556125.png">
+    <link rel="styleshoeet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <title>Netflix - Home</title>
+</head>
+    <body>
+    
+            <header class="topo"><!--HEADER INICIO-->
+
+                <div class="navegacao-geral">
+                
+                    <nav class="navegacao-left"><!--NAVEGACAO INICIO-->
+                        
+                            <a href=""><img src="img/netflix.png"></a>
+                        
+                            <ul class="ul">
+                                <li><a href="">Início</a></li>
+                                <li><a href="">Séries</a></li>
+                                <li><a href="">Filmes</a></li>
+                                <li><a href="">Bombando</a></li>
+                                <li><a href="">Recentes</a></li>    
+                            </ul>
+
+                    </nav><!--FINAL NAVEGACAO-->
+
+                    <nav class="navegacao-right"><!--NAVEGACAO INICIO-->
+                        
+                            <ul class="ul">
+                                <li class="mov"><i class="fas fa-search"></i></li>
+                                <li class="mov"><i class="fas fa-gift"></i></li>
+                                <li class="mov"><i class="far fa-bell"></i></li>
+                                <li class="mova"><img class="radius" src="img/icon.png"></li>
+                                <li><i class="fas fa-sort-down"></i></li>    
+                            </ul>
+
+                    </nav><!--FINAL NAVEGACAO-->
+
+                </div>
+
+              
+
+            </header><!--HEADER FINAL-->
+
+            
+                <section class="conteudo">
+
+                    <figure>
+                        <img src="img/aaaabbqmru4m7wctqwaselpajdt8xt1car7m1ynwbdus8utamuxvchswygtmhtcuvk7_bviz-o3rn6r8fwwp5mfungqd4wzn.webp" alt="Lucy background">
+
+
+                        <figcaption>
+
+                            <img src="img/aaaabz0kotb-al7yhskx4_a5bnbyatuosawhdfrjh-zqd20cuofvfsc_0sm-ru7-itvbwbv0gpqt2j-6iosauqnobhkacrcvwuukgpco.webp" alt="Lucy">
+
+                            <p></p>
+                        </figcaption>
+                    </figure>
+
+                    
+                 
+
+                </section>
+
+            <script>
+                const header = document.querySelector("#header");
+                
+                window.onscroll = (e) => {
+                    const scrollPosition = window.scrollY;
+
+                    if (scrollPosition > 0 && !header.classlist.contains("scrolling")) {
+                        header.classList.add("scrolling");
+                    } else if (scrollPosition <= 0) {
+                        header.classList.remove("scrolling");
+                    }
+                };
+            </script>
+
+
+    </body>
+</html>

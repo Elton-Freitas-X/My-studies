@@ -1,0 +1,30 @@
+#caixa{
+    width: 300px;
+    height: 300px;
+    padding: 8px;
+    margin: 20px;
+    background: #009670;
+    box-shadow: 20px 20px 5px rgba(0, 0,0,0.2); /*LEMBRANDO Q O 
+                                                  ULTIMO VALOR DO RGBA
+                                                  É A TRANSPARENCIA
+                                                  */
+}
+
+#caixa h1 {
+    color: white;
+    font-size: 60px;
+    text-shadow: 20px 20px 5px black ; /*primeira marcaçao (20px)
+                                     move para direita 
+                                     e se for negativo para 
+                                     esquerda 
+                                     e a para cima e para baixo
+                                     e se for negativo 
+                                     para cima
+                                     o texto é o ponto ZERO 
+                                     ponto inicial
+                                     e ADICIONAR UM TERCEIRO VALOR
+                                     DEFINE O BARRADO DA SOMBRA
+                                     o QUARTO VALOR aumenta o tamanho
+                                     da sombra 
+                                     */
+}

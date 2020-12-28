@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Divs e Span</title>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+
+            #principal {
+               background:yellowgreen;
+            }
+
+            #topo{
+                background: blue;
+            }
+            
+            #conteudo {
+                background: red;
+            }
+
+            #rodape{
+                background: green;
+            }
+
+            #assinatura{
+                background: pink;
+            }
+
+            .produto {
+                background: gray;
+                margin: 10px;
+            }
+
+            .azul{
+                color: blue;
+            }
+
+        </style>
+
+    </head>
+    <body id="principal">
+
+            <!-- div sao elementos do tipo block, esse elementos
+            sao responsavel por ocupar todo espaço da tela ou seja
+            tem a largura de 100%, e se comportam um abaixo do outro -->
+
+            <!-- span se comporta como se fosse inline, sempre coloca
+            um apos ao outro -->
+            
+            <div id="topo">
+
+                <img src="imagens/prime.jpg" width="200">
+
+                <div>
+                
+                <lu>
+                    <li>Home</li>
+                    <li>Produtos</li>
+                    <li>Contato</li>                   
+                </lu>
+
+                 </div>
+
+            </div>
+
+            <div id="conteudo">
+
+                <div class="produto">
+                    Produto 1
+                </div>
+
+                <div class="produto">
+                    Produto 2
+                </div>
+
+                <div class="produto">
+                    Produto 3
+                </div>
+            
+            </div>
+
+            <div id="rodape">
+
+                Todos os <span class="azul">direitos</span>reservados
+
+            </div>
+
+            <span id="assinatura">
+                Jamilton
+            </span>
+
+            <span id="assinatura">
+                Damaceno
+            </span>
+
+    </body>
+</html>

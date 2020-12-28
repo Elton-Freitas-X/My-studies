@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>News Tags de inputs HTML 5</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    
+    </head>
+
+    <body>
+        
+      <form>
+
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" autofocus>
+        <br><br>
+
+        <!-- Email required="required"
+        para que possar enviar os dados sem q deixe
+        o campo em branco
+        coloque no INPUT
+        -->
+        <label for="email">Email</label>
+        <input type="email" id="email" >
+        <br><br>
+
+        <!--Numeros 
+        O '"step" é para q possar ir de 5 em 5 
+        -->
+        <label for="numero">Número</label>
+        <input type="number" id="numero" min="1" max="20"
+        step="5">
+        <br><br>
+
+        <!--Url-->
+        <label for="url">url</label>
+        <input type="url" id="url" placeholder="ex: http://www.">
+        <br><br>
+
+         <!--Pesquisa-->
+         <label for="pesquisa">Pesquisa</label>
+         <input type="search" id="pesquisa">
+         <br><br>
+
+         <!--Range-->
+         <label for="range">Range</label>
+         <input type="range" id="range" min="1" max="20"
+         value="10">
+         <br><br>
+
+           <!--Data-->
+           <label for="data">Data</label>
+           <input type="date" id="data">
+           <br><br>
+
+            <!--Data-->
+            <label for="cor">Cor</label>
+            <input type="color" id="cor">
+            <br><br>
+ 
+
+        <input type="submit" name="" value="Enviar">
+
+      </form>
+
+    </body>
+
+</html>

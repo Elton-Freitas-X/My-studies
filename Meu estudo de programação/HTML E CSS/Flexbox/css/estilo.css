@@ -1,0 +1,102 @@
+/*#conteudo {
+    background: #dcdcdc;
+    height: 600px;
+    display: flex;*/
+
+    #conteudo {
+        background: #dcdcdc;
+        height: 600px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; /*para rodar em qlqr site*/
+    
+
+    /*
+    row, row-reverse,column,column-reverse
+    em coluna ou na mesma linha
+    
+    flex-direction: row;
+
+    
+    nowwap,wrap,wrap-reverse
+    re destrui os itens no container ou caixa (determinado espaço
+    q ele ocupa
+    
+    flex-wrap: nowrap;
+
+    
+    flex-start,flex-end,center,space-between,space-around
+    alinhas eles na horizontal
+    
+    justify-content: space-around;
+
+    
+    
+    stretch,center,flex-start,flex-end,baseline
+    
+    align-items: baseline;*/
+
+}   
+
+
+.item {
+    /*width: 200px;*/
+    height: 100px;
+    margin: 10px;
+    background: white;
+    border: 1px solid gray;
+
+    /*Define proporção de espaço oucpado por um item*/
+    flex-grow: 0 ;
+
+    /*Defube a caoacudade de redyçãi de tamanho do item*/
+    flex-shrink: 1;
+
+    /*Indica o tamanho inicial do flex item antes da 
+    distribuição do espaço restante.*/
+    flex-basis: 100px;
+}
+
+
+
+
+/*.item1 {
+    flex-grow: 1;
+    flex-shrink: 1
+}
+
+/*.item2 {
+    flex-grow: 2;
+    flex-shrink: 2;
+}
+
+
+/*.item3 {
+    flex-grow: 2;
+    flex-shrink: 5; /*QUANTO MAIOR O NUMERO MAIOR SERA O 
+                    INCOLHIMENTO DO ESPAÇO
+        
+}*/
+
+
+/*ORGANIZAR A ORDEM
+.ordem1 {
+    order: 1;
+}
+
+.ordem2 {
+    order: 2;
+}
+
+.ordem3 {
+    order: 3;
+}
+
+.ordem4 {
+    order: 4;
+}
+
+.ordem {
+    order: -1;
+}
+*/

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cor e imagem de fundo</title>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+
+            .body {
+                background-image: url('imagens/yoshi.png');
+                background-repeat: no-repeat; /* repeat-x, repeat-y
+                 no repeat, repeat */
+                background-attachment: fixed; /*scroll o conteudo
+                desce com a rolagem */
+                background-position: center bottom;/* center, left, right
+                segundo valor : top, center, bottom*/
+            }
+
+            .fundo {
+                background: blue url('imagens/yoshi.png') 
+                              repeat-x scroll top;
+                              /* todo essses estilo aplicados AQUI
+                              SAO CHAMADOS DE INTERNO STYLE SHEET
+                              estilos aplicado diretamente em alguma
+                              parte do body se chama inline style */
+            }
+        
+        </style>
+
+
+    </head>
+    <body class="fundo">
+        
+            <h1 class="">Conteúdo de título 1</h1>
+            <p>
+                orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Phasellus turpis sapien, tincidunt ac bibendum ut,laoreet sit amet nisl.
+                Aliquam porta ligula velit,ut facilisis odio egestas ac. orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Phasellus turpis sapien, tincidunt ac bibendum ut,laoreet sit amet nisl.
+                Aliquam porta ligula velit,ut facilisis odio egestas ac.     
+            </p>
+
+            <br>
+
+            <p>
+                orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Phasellus turpis sapien, tincidunt ac bibendum ut,laoreet sit amet nisl.
+                Aliquam porta ligula velit,ut facilisis odio egestas ac. orem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Phasellus turpis sapien, tincidunt ac bibendum ut,laoreet sit amet nisl.
+                Aliquam porta ligula velit,ut facilisis odio egestas ac.     
+            </p>
+
+
+    </body>
+</html>

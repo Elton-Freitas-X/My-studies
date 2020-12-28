@@ -1,0 +1,53 @@
+/**************************************
+Seletor universal
+* {
+	border: 1px solid red;
+}
+/**************************************
+Seletor de texto
+h1 {
+	color: green;
+}
+/**************************************
+Seletor de classe
+.verde {
+	color: green;
+}
+/**************************************
+Seletor de classe
+p.verde {
+	color: green;
+}
+
+**************************************
+Seletor de ID
+#cabecalho {
+	border: 1px solid blue;
+	}
+**************************************
+Seletor de filho   (OBS: aplicado no pai e filho diretamente ligados
+							nesse caso o filho é o "a")
+li>a {
+	color: red;
+	text-decoration: none;
+}
+**************************************
+Seletor de descendente   (OBS: os links "a" podem ser alterado msm
+							nao estando diretamente ligado)
+p a {
+	color: green;
+}
+
+**************************************
+Seletor de irmão adjacente (obs: aplicado em apenas 1 seletor APOS ao "+",
+								se tiver outro 2 "p" so sera aplicado
+								no paragrafo q estiver mais proximo do "H1".)
+h1+p {					
+	color: red;
+}
+**************************************
+Seletor de irmão geral  (OBS: aplicado em todos os "p" apos o H1)*/  
+h1~p {
+	color: pink;
+}
+

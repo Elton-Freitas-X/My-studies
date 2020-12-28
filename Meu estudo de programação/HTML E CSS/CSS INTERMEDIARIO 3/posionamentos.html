@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Posicionamentos (static, relative abolute
+            e fixed)</title>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+
+        body{
+            background: #007fc7 ;
+        }
+
+       #container {
+            background: #FFF;
+            width: 800px;
+            margin: 10px auto;
+            padding: 10px;
+       }
+
+       h1 {
+            position: static;
+       }
+
+       p {
+            width: 300px;
+       }
+
+       .fixed {
+            border: 1px solid red;
+            background: #f2f2f2;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            margin: 0px;
+       }
+
+       .absolute {
+            border: 1px solid red;
+            background: #f2f2f2;
+            position: absolute; 
+            top: 0px;
+       }
+
+       .relative {
+            border: 1px solid red;
+            position: relative;
+            top: 10px;
+            left: 20px;
+       }
+
+        /* por padrão o posionamento STATIC ja é aplicado
+        a posição RELATIVE quando aplica vc pode tirar 
+        um paragrafo ou h1 etc da sua posição padrao (sua 
+        posição inicial;;
+        Da para usar posições negativas -20 por exemplo
+        ela ira para o lado contrario;
+        O ABSOLUTE sai do fluxo padrao sem afetar as demais
+        coisas;
+        No FIXED se vc rolar a pagina o local q vc marcou cm
+        fixo se manterá; 
+        */
+
+        </style>
+
+    </head>
+
+    <body>
+    
+        <div id="container">
+
+            <h1>Posicionamentos</h1>
+
+            <p>
+                 P1 Lorem asidhas asdasd asd asd
+                Lorem asidhas asdasd asd asd
+                Lorem asidhas asdasd asd asd 
+                Lorem asidhas asdasd asd asd.
+                Lorem asidhas asdasd asd asd.
+            </p>
+
+            <p class="fixed">
+                 P2 Lorem asidhas asdasd asd asd
+                Lorem asidhas asdasd asd asd
+                Lorem asidhas asdasd asd asd 
+                Lorem asidhas asdasd asd asd.
+                Lorem asidhas asdasd asd asd.
+            </p>
+
+            <p>
+                 P3 Lorem asidhas asdasd asd asd
+                Lorem asidhas asdasd asd asd
+                Lorem asidhas asdasd asd asd 
+                Lorem asidhas asdasd asd asd.
+                Lorem asidhas asdasd asd asd.
+            </p>
+
+        </div>
+
+    </body>
+</html>

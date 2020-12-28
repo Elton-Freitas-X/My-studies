@@ -1,0 +1,28 @@
+#caixa{
+    width: 300px;
+    height: 300px;
+    background: #b9c941;
+    padding: 50px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing:border-box;                  /*pq o padding sempre acrescente 
+                                            da sua caixa por isso é utilizado
+                                            o box sizing*/
+    /*-webkit-border-radius: 20px 90px;
+    -moz-border-radius: 20px 90px;          Para utilização do border radius
+                                            é necessario o "webky" e o "moz"
+                                            que sao prefixos para 
+                                            ixibir esses arredondamentos
+                                            em navegadores com versoes mais 
+                                            antigas.    
+    border-radius: 10px 50px 80px 100px;    se eu fizer isso 20px 90px
+                                            aplicara 20 no canto superior
+                                            esquedo E no canto inferior 
+                                            direito, E o 90 nos outros dois
+                                            lugares
+    */
+}
+
+.arredondamento{
+    border-radius: 10px 50px 80px 100px;
+}

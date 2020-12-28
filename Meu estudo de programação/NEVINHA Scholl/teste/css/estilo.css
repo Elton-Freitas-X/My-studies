@@ -1,0 +1,281 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.top {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/genshin_11_4K.jpg);
+    background-repeat: no-repeat;
+    padding-top: 48px;
+    background-size: cover;
+    min-width: 1340px;
+}
+
+div.display {
+    display: flex;
+    justify-content: space-between;
+    min-width: 1200px;
+}
+
+img.logo {
+    margin-left: 54px;
+}
+
+div.buttons {
+    width: 237px;
+    margin-right: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ a.buttom1 {
+    font-family: Impact, fantasy;
+    border: 1px solid;
+    height: 49px;
+    text-align: center;
+    width: 100px;
+    border-radius: 34%;
+    color: rgb(145, 189, 226);
+    background-color: #0b0546;
+    line-height: 25px;
+    opacity: 0.6;
+ }
+
+ a.buttom2 {
+    font-family: Impact, fantasy;
+    border: 1px solid;
+    height: 49px;
+    text-align: center;
+    width: 100px;
+    border-radius: 34%;
+    color: rgb(145, 189, 226);
+    background-color: #0b0546;
+    line-height: 45px;
+    opacity: 0.6;
+ }
+
+ a.buttom1:hover, a.buttom2:hover  {
+    border: 1px solid;
+    color: rgb(145, 189, 226);
+    background-color: #0b0546;
+    transition: all 0.3s;
+    opacity: 1;
+ }
+
+ div#imagens {
+    min-width: 1200px;
+    width: 100%;
+    height: 66vh;
+ }
+
+ div.imagem1 {
+    background-image: url(../img/da831d0c3f0494309f781c0af35ed878_8481869118923225649.png);
+    background-repeat: no-repeat;
+    height: 67vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-position: center;
+ }
+
+ div.imagem1 a i {
+    color: #fff;
+    font-size: 54px;
+    background: rgb(78, 90, 75);
+    border-radius: 100%;
+ }
+
+ div.imagem1 a i:hover {
+    color: #000;
+    opacity: 0.3;
+    background: #fff;
+    border-radius: 100%;
+    transition: all 0.4s;
+ }
+
+ div.imagem2 {
+    background-image: url(../img/fb351287cfbc262c47793585108644ab_608141484480652952.png);
+    height: 43vh;
+    background-size: cover;
+    margin-top: -117px;
+ }
+
+/********************LIST**********************/
+
+.borda {
+    background-image: url(../img/36841e16b442b088ecc6da64952b1fd9_2507081675898911381.png);
+    height: 29vh;
+    min-width: 1340px;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.borda2 {
+    display: flex;
+    justify-content: center;
+    min-width: 1370px;
+}
+
+h2.info {
+    font-size: 60px;
+    text-align: center;
+    color: #7c77b8;
+    user-select: none;
+    margin-top: 89px
+}
+
+ul#char {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 1271px;
+    margin: 0;
+    padding: 0 0 0 69px;
+}
+
+li.char1 {
+    height: 55vh;
+    padding-right: 14px;
+    padding-left: 14px;
+    padding-bottom: 29px;
+}
+
+li.char1:hover {
+    transition: all 1.0s;
+    transform: translateY(-30px);
+    background: linear-gradient(149deg,rgb(101, 101, 179), rgb(121, 107, 138), rgba(172, 162, 218,0.3));
+    border-radius: 100%;
+}
+
+/*******************************************/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    min-width: 1340px;
+    background-color: #171618;
+    height: 31vh;
+}
+
+div#rodape {
+    display: flex;
+    justify-content: center;
+    margin-left: 43px;
+    margin-right: 43px;
+    border-bottom: #3f3d3d solid 2px;
+}
+
+div#rodape h2 i {
+    margin: 0 10px 0 10px;
+}
+
+div#rodape h2 {
+    font-weight: normal;
+    font-size: 20px;
+    color: #b9b8bd;
+}
+
+div#rodapeinfo {
+    height: 24vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align {
+    width: 976px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/**********as imagens*********/
+div.rodapeimg {
+    width: 427px;
+    height: 91px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 52px;
+    color: #bfbfbf;
+}
+
+.img1 {
+    height: 60px;
+}
+
+.img2 {
+    height: 110px;
+}
+/******final as imagens*****/
+
+
+/**********ao lado das images*****************/
+div.rodapedt {
+    width: 508px;
+    height: 150px;
+}
+
+div.rodapedt p a {
+    font-weight: normal;
+    font-size: 20px;
+    color: #b9b8bd;
+}
+
+div.rodapedt p {
+    color: #bfbfbf;
+}
+
+div.rodapedt p.color {
+    color: #fff;
+    font-size: 16px;
+}
+
+
+
+
+/****TENTATIVA DE CARROSSEL*****/
+#items-wrapper {
+    box-sizing: border-box;
+    min-width: 1300px;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    height: 100%;
+}
+
+#items {
+    list-style: none;
+    display: flex;
+    overflow-x: auto;
+    width: 1177px;
+    height: 525px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.items {
+    flex: none;
+    width: 35%;
+    height: 500px;
+    scroll-snap-align: start;
+}
+
+li.items img {
+    width: 100%;
+    height: 100%;
+}
+
+/****FINAL TENTATIVA DE CARROSSEL*****/

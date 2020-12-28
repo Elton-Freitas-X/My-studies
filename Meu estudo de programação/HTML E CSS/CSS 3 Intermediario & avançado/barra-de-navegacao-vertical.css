@@ -1,0 +1,46 @@
+/*
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 5px 20px;
+    background: url(arquivos-necessarios-barra-navegacao-vertical/seta.png) no-repeat left center;
+}
+*/
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul a {
+    width: 200px;
+    height: 40px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+    text-indent: 40px; /* é basicamento o padding de texto*/ 
+    line-height: 40px; /* aumentar a altura da linha*/
+    background: #f7b600 url(arquivos-necessarios-barra-navegacao-vertical/menu.png) no-repeat left;
+}
+
+a:hover {
+    background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;
+}
+
+#home #navegacao .home a, 
+#sobre #navegacao .home a
+#servicos #navegacao .home a {
+    background-position: right bottom;
+    background-color: #f99200;
+    color: #fff;
+}
+
+/* para que funfe a marcação é necessario criar o file com
+o nome nome da pag e etc.*/

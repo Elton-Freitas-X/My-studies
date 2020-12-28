@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'netflix_sansbold';
+    src: url('../fontes/netflix_sans_bold-webfont.woff2') format('woff2'),
+         url('../fontes/netflix_sans_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    color: #fff;
+}
+
+body {
+    background-color: black;
+    font-family: 'netflix_sansbold';
+}
+
+.topo {
+    height: 10vh; 
+
+}
+
+.navegacao-geral {
+    width: 100%;
+    background-color: rgb(15, 14, 14);
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    position: sticky;
+    text-transform: uppercase;
+    font-size: 15;
+
+}
+
+.navegacao-left {
+        font-size: 14px;
+        color: #FFF;
+        display: flex;
+        align-items: center;
+}
+
+.navegacao-left a img {
+    border: 1px solid red;
+    margin-left: 50px;
+}
+
+.navegacao-right {
+    color: #FFF;
+}
+
+.ul li.mov {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+}
+
+.ul {
+    display: flex;
+    list-style: none;
+    margin: 6px;
+}
+
+.ul li {
+    margin: 8px;
+}
+
+.ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.ul li a:active {
+    text-decoration: none;
+    color: rgb(181, 192, 181);
+}
+
+.ul li a:hover {
+    text-decoration: none;
+    color: rgb(163, 170, 163);
+    transition: 1s;
+}
+
+.redondo {
+    border-radius: 25%;
+}
+
+li.mova+li {
+    margin-right: 50px;
+}
+
+nav h1 {
+    color: red;
+}
+
+
+
+
+
+.conteudo {
+    width: 100%;
+    height: 68.5vh;
+    color: #fff;
+    background: url(../img/aaaabbqmru4m7wctqwaselpajdt8xt1car7m1ynwbdus8utamuxvchswygtmhtcuvk7_bviz-o3rn6r8fwwp5mfungqd4wzn.webp) no-repeat center top;
+    display: flex;
+    align-items: center;    
+}
+
+.conteudo1 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.conteudo1 p {
+    padding-top: 30px;
+    max-width: 400px;
+}
+
+.conteudo1 .aboutmovie a {
+    padding-top: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+}
+
+a.assistir {
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5%;   
+}
+
+a.info {
+    text-decoration: none;
+    background-color: rgba(196, 186, 186, 0.5);
+    color: #fff;
+    border-radius: 5%;
+}
+
+.aboutmovie a.assistir {
+    padding: 9px;
+}
+
+.aboutmovie {
+    min-width: 296px;
+}
+
+.aboutmovie a.info {
+    padding: 10px;
+}
+
+.aboutmovie i {
+    padding-right: 10px;
+}
+
+a.assistir:hover {
+   background-color: rgb(196, 186, 186);   
+}
+
+a.info:hover {
+    background-color: rgba(83, 81, 81, 0.7);
+}
+
+
+
+
+#conteudo2 {
+    height: 32vh;
+    min-width: 1100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.conteudo2 {
+    padding-right: 10px;
+}
+
+#filmes h3 {
+    margin: 0px 0px 10px 50px;
+}
+
+.trasition {
+    height: 270px;
+}
+
+.trasition:hover {
+    height: 290px;
+    transition: all 1.7s;
+}
+
