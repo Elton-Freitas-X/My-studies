@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Escopo de Variaveis</title>
+    <script>
+        
+        // 3 escopos: global = é o escopo do script como um todo
+        //            função = refere ao conteudo inserido no bloco de função (function)
+        //            bloco =  seriam instruções contidas dentro de comandos (if ou switch)
+
+        var serie = 'Friends'
+
+        //escopo de bloco   VARIAVEIS DENTRO DESSE ESCOPO SOFREM ELEVAÇÃO (rosting)
+        // pq estao dentro do escopo global
+        
+        if(true){
+            var serie2 = 'Game of Thronos'
+            document.write(serie)
+        }
+
+        document.write(serie2)
+
+        document.write('<br />')
+
+        function x() {
+
+            var serie3 = 'The Walking Dead' // escopo da funçao nao sofre elevação 
+            document.write(serie)
+            document.write(serie2)
+        }
+
+        x() //chamar a função
+
+        document.write('<br />')
+        document.write(serie3)
+
+    </script>
+
+
+</head>
+<body>
+   
+</body>
+</html>
