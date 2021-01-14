@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>
+            Atrelando funções á eventos disparados por
+            elementos no HTML
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>
+            Lógica de programação JS (Atrelando funções á 
+            eventos disparados por
+            elementos no HTML)
+        </h1> 
+
+        <button onclick="somar()">+</button>
+        <button onclick="subtrair()">-</button>
+        <button onclick="multiplicar()">*</button>
+        <button onclick="dividir()">/</button>
+        <div id="output"></div>
+
+        <script>
+        
+            var n1 = prompt('digite um numero');
+            n1 = parseFloat(n1);
+
+            escrevre();
+
+            function escrevre() {
+                var output = document.querySelector('#output');
+                output.innerHTML = n1;
+            }
+
+            function somar (){
+                var n = prompt('digite outro numero');
+                n = parseFloat(n);
+
+                n1 += n;
+                escrevre();
+            }
+
+            function subtrair (){
+                var n = prompt('digite outro numero');
+                n = parseFloat(n);
+
+                n1 -= n;
+                escrevre();
+            }
+
+            function multiplicar (){
+                var n = prompt('digite outro numero');
+                n = parseFloat(n);
+
+                n1 *= n;
+                escrevre();
+            }
+
+            function dividir (){
+                var n = prompt('digite outro numero');
+                n = parseFloat(n);
+
+                n1 /= n;
+                escrevre();
+            }
+
+
+     
+        </script>
+
+    </body>
+
+    
+</html>

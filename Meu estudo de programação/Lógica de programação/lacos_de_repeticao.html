@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Laços de Repetição</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Lógica de programação JS (Laços de repetição)</h1>
+    </body>
+
+    <script>
+       /* ------------LOOP WHILE-------------------
+       var numero = prompt('digite um numero');
+        numero = parseFloat(numero);
+
+        //repita até que indice seja <= 1000
+        var indice = 1;
+
+        while (indice <= 1000) {
+        document.write( numero + ' x '+ indice +' = '+ (numero * indice) +'<br>');
+
+        indice = indice + 1;
+    }
+    document.write('saiu do loop')
+    
+    ---------------------------------OUTRO EXERCICIO----------------------
+
+    var numero = 0
+    var contador = 0
+
+    numero = prompt('Digite um número qualquer entre 10 e 100')
+
+    if ((numero < 10) || (numero > 100)) {
+        alert('Valor fora do intervalo especificado!')
+    } else {
+        while (contador <= numero)
+        {
+            document.write(contador + '<br/>')
+            contador++
+        }
+    }
+
+    ----------------TIPOS DE LOOPS---DO/WHILE e FOR---------------------
+    
+    var numero = prompt('digite um numero');
+        numero = parseFloat(numero);
+
+        
+        var indice = 1001;
+
+        do {
+        document.write( numero + ' x '+ indice +' = '+ (numero * indice) +'<br>');
+
+        indice = indice + 1;
+    } while (indice <= 1000)
+    document.write('saiu do loop')
+
+    A DIFEFERENÇA DO LOOP DO WHILE E O DO/WHILE É QUE ELA EXECUTA UMA VEZ 
+    DEPOIS SAI DO LOOP
+
+    ----------------------FOR--------------------
+    É UMA JUNÇÃO OU UMA ABREVIAÇÃO DO LOOP WHILE 
+
+    var numero = prompt('digite um numero');
+        numero = parseFloat(numero);
+
+         
+
+    for (var i = 1; i <= 1000; i++) {
+        document.write( numero + ' x '+ i +' = '+ 
+        (numero * i) +'<br>');
+    }
+
+    document.write('saiu do loop');
+    
+    ------------------EXERCICIO--------------------------
+
+    var numero = prompt('digite um numero');
+        numero = parseFloat(numero);
+
+        //repita até que indice seja <= 1000
+        var indice = 0; //MUDOU AQUI
+
+        while (indice <= 1000){
+        document.write( numero + ' x '+ indice +' = '+ 
+        (numero * indice) +'<br>');
+
+
+        if(indice % 10 === 0 && indice > 0) {
+            document.write('<hr>');
+        }
+
+        indice = indice + 1;
+
+    }
+    document.write('saiu do loop')
+
+
+
+    
+    --------------------------EXERICIO-------------------------
+
+
+
+         var ano = 1004;
+
+        while (ano <= 2017){
+        document.write( ano +'<br>');
+        //ano = ano + 4;
+        ano += 4;
+
+    }
+    document.write('saiu do loop')
+
+    */
+
+        var ano = 1004;
+
+        while (ano <= 2017) {
+
+            if( !(ano % 100 === 0) || (ano % 400 === 0)){
+                document.write( ano + '<br>');
+            } else {
+                document.write(ano + ' nao é bissexto<br>');
+            }
+            
+            ano += 4
+            
+        }
+
+    </script>
+</html>

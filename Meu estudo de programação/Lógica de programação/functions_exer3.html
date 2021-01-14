@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>
+            Funções recebendo parâmetros
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>
+            Lógica de programação JS (Atrelando funções á 
+            eventos disparados por
+            elementos no HTML)
+        </h1> 
+        <!--use as duplas fora e aspas simples dentro do parentese
+        ou o contrario-->
+        <button onclick="calcular('+')">+</button>
+        <button onclick="calcular('-')">-</button>
+        <button onclick="calcular('*')">*</button>
+        <button onclick="calcular('/')">/</button>
+
+        <div id="output"></div>
+
+        <script>
+
+            var n1 = prompt('digite um numero');
+            n1 = parseFloat(n1);
+
+            escrevre();
+
+            function escrevre() {
+                var output = document.querySelector('#output');
+                output.innerHTML = n1;
+            }
+
+            function calcular(simbolo){
+                var n = prompt('digite outro numero');
+                n = parseFloat(n);
+
+                //n1 += n;
+
+                if (simbolo === '+') {
+                    n1 += n
+                } else if(simbolo === '-') {
+                    n1 -= n
+                } else if(simbolo === '*') {
+                    n1 *= n
+                } else if(simbolo === '/') {
+                    n1 /= n
+                }
+
+                escrevre();
+            }
+
+
+            /*
+            var n1 = prompt('digite um numero');
+            n1 = parseFloat(n1);
+
+            escrevre();
+
+            function escrevre() {
+                var output = document.querySelector('#output');
+                output.innerHTML = n1;
+            }
+
+            function calcular(simbolo){
+                var n = prompt('digite outro numero');
+                n = parseFloat(n);
+
+                //n1 += n;
+
+                switch(simbolo) {
+                    case '+':
+                        n1 += n;
+                        break;
+
+                    case '-':
+                        n1 -= n;
+                        break
+
+                    case '*':
+                        n1 *= n;
+                        break
+
+                    case '/':
+                        n1 /= n;
+                        break    
+                }
+                escrevre();
+            }
+            */
+        </script>
+
+    </body>
+
+    
+</html>

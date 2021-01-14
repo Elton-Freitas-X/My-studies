@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>O que são variáveis e tipo de dados</title>
+
+
+</head>
+<body>
+    <h1>Lógica de programação com Javascript</h1>
+   
+    <script>
+        /*
+
+        Oque é algoritmo? é uma sequencia de regras (como um passo a passo)
+        que visa obter uma solução
+
+        var num1 = prompt('Digite um número');
+
+        num1 = parseFloat(num1);
+
+        var num2 = prompt('Digite outro número');
+
+        num2 = parseFloat(num2);
+
+        alert (num1 + num2);
+        
+
+        --------------OPERADORES----------- ARITMETVOS---------------
+
+        var nume1 = prompt('Digite um número')
+
+        nume1 = parseInt(nume1)
+
+        var nume2 = prompt('Digite outro número')
+
+        nume2 = parseInt(nume2)
+
+        document.write('A subtração é: ' + (nume1 - nume2))
+        document.write('<br />')
+        document.write('A subtração é: ' + (nume1 * nume2))
+        document.write('<br />')
+        document.write('A subtração é: ' + (nume1 / nume2))
+        document.write('<br />')
+        document.write('A subtração é: ' + (nume1 + nume2))
+        
+        
+
+       --------- PRECEDÊNCIA ---------
+
+        var num1 = prompt('Digite um número');
+
+        num1 = parseFloat(num1)
+
+        var num2 = prompt('Digite outro número');
+
+        num2 = parseFloat(num2)
+
+        var media = (num1 + num2) / 2; //divisao e multiplicação tem uma 
+                                       //precedencia por isso uso de parentese
+                                       //na soma
+        alert('A média é : ' + media) 
+        
+
+        ---------EXERCÍCIO-----------
+
+        var num1 = prompt('Digite um número');
+
+        num1 = parseInt(num1);
+
+        var num2 = prompt('Digite outro número');
+
+        num2 = parseInt(num2);
+
+        var resultado = num1 % num2
+        var resultado = num1 ** num2;
+
+        alert('O resto da divisão de ' + num1 + ' por ' + num2 + ' é: ' + resultado);
+        ou NÃO crie a variavel resultado e resolva as operações dentro do alert
+
+        ------------CONTROLE DE DECISÃO----------
+        
+
+        var media = prompt('Digite a sua nota:')
+
+        media = parseFloat(media)
+
+        if (media >= 7){
+            //bloco verdade
+            alert("Parabéns! Você foi aprovado");
+        } else {
+            //bloco mentira
+            alert("Reprovado, Estude mais!")
+        }
+
+        ---------------EXERCÍCIO-----------------
+        
+
+        var jogador1 = prompt('número do jogador1')
+        jogador1 = parseInt(jogador1)
+
+        var jogador2 = prompt('número do jogador2')
+        jogador2 = parseInt(jogador2)
+        
+        //SE FOREM IGUAIS EMPATE
+        if (jogador1 === jogador2){
+            alert('Vocês empataram')
+        } else {
+
+            //sortear um numero entre 0 e 1 
+            var sorteado = parseInt(Math.random() * 2);
+
+            //se o numero sorteado for 0, ganha quem
+            //escolher o numero MENOR
+           if (sorteado === 0) {
+
+                if (jogador1 < jogador2) {
+                    alert('GANHOU O JOGADOR 1');
+                } else {
+                    alert('GANHOU O JOGADOR 2');
+                }
+
+
+            //se o numero sorteado for 1, ganha quem
+            //escolher o numero MAIOR
+           } else {
+                if(jogador1 > jogador2) {
+                    alert('ganhou o jogador 1')
+                } else {
+                    alert('ganhou o jogador 2')
+                }
+           }
+        }
+        
+        
+        ------------EXERCICIO DE OPERAÇÕES LOGICAS ------------
+
+
+        var nota1 = prompt('digite sua primeira nota')
+        nota1 = parseInt(nota1)
+
+        var nota2 = prompt('digite sua segunda nota')
+        nota2 = parseInt(nota2)
+
+        var media = (nota1 + nota2) / 2
+
+        if (media > 5 && nota1 > 0 && nota2 > 0) {
+            alert('Parabéns! continue estudando')
+        } else {
+            alert('Ai nao, neh? Volte a estudar')
+        }
+
+        
+
+        
+        var nota1 = prompt('digite sua primeira nota')
+        nota1 = parseFloat(nota1)
+
+        var nota2 = prompt('digite sua segunda nota')
+        nota2 = parseFloat(nota2)
+
+        var media = (nota1 + nota2) / 2
+
+        if (nota1 === 0 || nota2 === 0 || media >=5) {
+            alert('Parabéns! continue estudando')
+        } else {
+            alert('Ai nao, neh? Volte a estudar')
+        }
+    
+
+
+
+        ---REFAZER O EXERCICIO E ESSA É A FORMA CORRETA---  
+
+
+
+        var jogador1 = prompt('número do jogador1')
+        jogador1 = parseInt(jogador1)
+
+        var jogador2 = prompt('número do jogador2')
+        jogador2 = parseInt(jogador2)
+        
+        //SE FOREM IGUAIS EMPATE
+        if (jogador1 === jogador2){
+            alert('Vocês empataram')
+        } else {
+
+            var sorteado = parseInt(Math.random() * 2);
+            alert('Sorteado: ' + sorteado);
+
+            if( sorteado === 0 && jogador1 < jogador2 ||
+                sorteado === 1 && jogador1 > jogador2 ){
+                    alert('ganhou o jogador 1')
+               } else {
+                    alert('ganhou o jogador 2')
+               }
+
+        }
+
+        ------EXERCICIO SWITCH--DECISION CONTROL-----
+    
+
+
+    var n = prompt('digite um número')
+    n = parseInt(n)
+
+    "O SWITCH SÓ É UTILIZADO PARA OPERADORES IDENTICOS
+    OU SEJA, OS COMPARADORES NAO IRAM FUNCIONAR NO
+    SWITCH"
+
+    switch(n){
+        case 1:
+            alert('boa escolha!');
+            break;
+        case 2:
+            alert('legal!');
+            break
+        case 3:
+            alert('caraaamba!');
+        default :
+            alert('escolha de 1 a 3')
+    }
+
+
+    ----TABEM É POSSIVEL FAZER COM IF/ELSE----
+
+    var n = prompt('digite um número')
+    n = parseInt(n)
+
+    if (n === 1) {
+        alert('boa escolha!')
+    } else if (n === 2) {
+        alert('legal!')
+    } else if (n === 3) {
+        alert('caraaaamba!')
+    } else if (n > 3) {
+        alert('escolha entre 1 e 3')
+    }
+    */
+    </script>
+</body>
+</html>

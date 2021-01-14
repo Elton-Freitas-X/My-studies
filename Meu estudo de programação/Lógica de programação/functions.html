@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>
+            Atrelando funções á eventos disparados por
+            elementos no HTML
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>
+            Lógica de programação JS (Atrelando funções á 
+            eventos disparados por
+            elementos no HTML)
+        </h1>
+        
+        <button onclick="mostrarTabuada()">Criar Tabuada</button>
+        <button onclick="limparTabuada()">Limpar Tabuada</button>
+
+        <script>
+        
+        
+        function mostrarTabuada(){
+            //perguntar o numero para o usario
+            var n = prompt('digite um número');
+
+            //converter o numero
+            n = parseFloat(n);
+
+            //criar uma variavel que servira de indice
+            var i = 1;
+
+            //euquanto indice menor ou igual a 1000
+                //concatena na variavel mensagem
+            while( i <= 10) {
+                mensagem += n + ' x '+ i +' = ' + (n*i) +'<br>';
+                i++;
+            }
+
+            output.innerHTML = mensagem;
+            //mostrar mensagem no output
+
+        }
+
+        function limparTabuada(){
+            mensagem = '';
+            output.innerHTML = mensagem;
+        }
+        
+        var output = document.querySelector('#output');
+
+        var mensagem = '';
+        
+
+
+        </script>
+
+    </body>
+
+    
+</html>
