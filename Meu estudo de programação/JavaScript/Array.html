@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript(ARRAY AND OBJECT)</title>
+    <script>
+    
+        //ARRAY 
+        //É UMA VARIAVEL COMPOSTA
+        //COMO SE FOSSE UMA LINHA COM VARIAS COLUNAS
+        //E CADA UMA DESSAS COLUNAS PODE ARMAZENAR UMA INFORMAÇÃO
+        //geralmente utilizado p/ armazenar dados de um contexto especifico
+        //var pessoa = ['Elton', 'Freitas', '23'] <--ESSE É O ARRAY
+
+
+        //var pessoa = {nome:'Elton', sobrenome:'Freitas', idade:23} <--ESSE É O OBJETO
+
+        /*
+        DIFIRENÇA DE UM PARA O OUTRO 
+        UM USA CHAVES(Objeto) O OUTRO COLCHETES(ARRAY)
+
+         console.log(pessoa['nome']) para objeto ou sem as chaves(pessoa.nome)
+                                       
+          console.log(pessoa['0']) 0 sendo o primeiro valor 
+        */
+
+        var nome = 'Elton';
+        var sobrenome = 'Freitas';
+        var idade = 23;
+        //var pessoa = ['Elton', 'Freitas', '23']
+        var frutas = ['laranja', 'abacate','melancia'];
+        var pessoa = {
+            nome:'Elton', 
+            sobrenome:'Freitas', 
+            idade:23, 
+            andar: function(){
+                alert('caminhando')
+            }
+        };
+            //frutas.push('pitanga') o usa os conteudos dentro de frutas +1
+        frutas.reverse()   // ou seja, mais a pitanga, e somando 4 itens
+        console.log(frutas);       // p/ o tamanho do array, na variavel
+                                //fruta, o tamanho é 3, pela quantidade de
+                                   //valores dentro do colchetes
+
+                                   //.toString() para a array ir como texto
+
+                                   //.join(' - ')para adicionar algo apos a
+                                   //cada item
+
+                                   //frutas.pop()para remover o item
+                                   //nesse caso seria a pitanga
+
+                                   //frutas.shift(para remover o primeiro
+                                   //item, nesse caso é a laranja
+
+                                   //frutas.unshift(pitanga)para para adicionar
+                                   // o item no começo
+
+                                   //frutas.sort()para para ficar em
+                                   // ordem alfabetica
+
+                                   //frutas.reverse()para para inverter
+                                   // ordem do ARRAY
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

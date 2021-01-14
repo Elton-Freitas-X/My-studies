@@ -12,11 +12,59 @@
             eventos disparados por
             elementos no HTML)
         </h1> 
-      
+
+        <!--
+            Funções que retornam valores 
+            Funções que retornam valores são úteis para que o 
+            desenvolvedor tenha autonomia para decidir o que deseja
+            fazer com ovalor retornado
+        -->
+    
+        <button onclick="mostrarAreaAlert(largura, altura)">
+        mostrar area no alert</button> 
+
+        <button onclick="mostrarAreaOutput(largura, altura)">
+        mostrar area no output</button>
         
-        
+        <div id="output"></div>
 
         <script>
+
+            var largura = prompt('digite a largura');
+            largura = parseFloat(largura);
+
+            var altura = prompt('digite a altura');
+            altura = parseFloat(altura);
+            // se eu tirar isso, a função embaixo nao funcoina
+            //APENAS IRÁ FUNCIONAR SE TIRAR O COMENTARIO DAS VARIAVEIS A CIMA
+            function mostrarAreaAlert(){
+                var largura = prompt('digite a largura');
+                largura = parseFloat(largura);
+
+                var altura = prompt('digite a altura');
+                altura = parseFloat(altura);
+
+                var area = calcularArea(largura, altura);
+
+                alert('a área total é: ' + area );
+            }
+
+            function mostrarAreaOutput(){
+                var largura = prompt('digite a largura');
+                largura = parseFloat(largura);
+
+                var altura = prompt('digite a altura');
+                altura = parseFloat(altura);
+
+                var area = calcularArea(largura, altura);
+
+                document.querySelector('#output').innerHTML = 'área total é ' + area;
+            }
+
+
+            function calcularArea(l, a) {
+                return l * a;
+            }
 
         </script>
 
