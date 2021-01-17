@@ -20,23 +20,16 @@
             fazer com ovalor retornado
         -->
     
-        <button onclick="mostrarAreaAlert(largura, altura)">
+        <button onclick="mostrarAreaAlert()">
         mostrar area no alert</button> 
 
-        <button onclick="mostrarAreaOutput(largura, altura)">
+        <button onclick="mostrarAreaOutput()">
         mostrar area no output</button>
         
         <div id="output"></div>
 
         <script>
 
-            var largura = prompt('digite a largura');
-            largura = parseFloat(largura);
-
-            var altura = prompt('digite a altura');
-            altura = parseFloat(altura);
-            // se eu tirar isso, a função embaixo nao funcoina
-            //APENAS IRÁ FUNCIONAR SE TIRAR O COMENTARIO DAS VARIAVEIS A CIMA
             function mostrarAreaAlert(){
                 var largura = prompt('digite a largura');
                 largura = parseFloat(largura);

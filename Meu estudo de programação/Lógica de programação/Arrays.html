@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>
+            Array(conjunto de dados)
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>
+            Lógica de programação JS (Atrelando funções á 
+            eventos disparados por
+            elementos no HTML)
+        </h1> 
+
+        <div id="output"></div>
+
+        <script>
+
+            //Array = é agrupar de uma maneira logica informações
+            //Conjunto de dados agrupados entre [] colchetes
+
+           /* var produtos = new Array('caneta', 'lapis','tesoura', 'borracha','caderno', 'livro')
+
+            produtos.push('compasso', 'cartolina')
+
+            var output = document.querySelector('#output');
+
+            var msg = '';
+            for (var i = 0; i < produtos.length; i++){
+                msg += 'produto: ' + (i + 1) + ':' + produtos[i] + '<br>';
+
+            }
+
+            output.innerHTML = msg;
+            
+
+            var dias = new Array('domingo', 'segunda','terça',
+            'quarta','quinta','sexta','sabado')
+
+            var hoje = new Date()
+            var diaSemana = hoje.getDay()// retorna o dia da semana
+            
+            0 - domingo
+            1 - segunda
+            etc..
+            
+
+            alert('Bem vindo, hoje  é ' + hoje + ', e o dia da semana é' + 
+            diaSemana)
+            */
+
+            var arr = new Array(1, 2, 3, 5, 2)
+
+            var somaOsoPares = somaOsoPares(arr)
+
+            alert('a soma é: ' + somaOsoPares)
+           
+                function somaOsoPares(arr){
+                    var soma = 0
+                for(var i = 0; i < arr.length; i++){
+                    console.log(i)
+                    console.log(arr[i])
+
+                    if( !isNaN(arr[i]) && arr[i] % 2 === 0){
+                        soma += arr[i];
+                    }
+                }
+                return soma
+                }
+
+            //mostrar a soma dos numeros pares
+        </script>
+
+    </body>
+
+    
+</html>

@@ -2,7 +2,7 @@
 <html lang="pt-br">
     <head>
         <title>
-            Funções recebendo parâmetros
+            TRY E CATCH
         </title>
         <meta charset="utf-8">
     </head>
@@ -12,8 +12,7 @@
             eventos disparados por
             elementos no HTML)
         </h1> 
-        <!--use as duplas fora e aspas simples dentro do parentese
-        ou o contrario-->
+       
         <button onclick="iniciarCalculo('+')">+</button>
         <button onclick="iniciarCalculo('-')">-</button>
         <button onclick="iniciarCalculo('*')">*</button>
@@ -22,53 +21,31 @@
         <div id="output"></div>
 
         <script>
-            /*
-            var n1 = prompt('digite um numero');
-            n1 = parseFloat(n1);
-
-            escrevre();
-
-            function escrevre() {
-                var output = document.querySelector('#output');
-                output.innerHTML = n1;
-            }
-
-            function calcular(simbolo){
-                var n = prompt('digite outro numero');
-                n = parseFloat(n);
-
-                //n1 += n;
-
-                if (simbolo === '+') {
-                    n1 += n
-                } else if(simbolo === '-') {
-                    n1 -= n
-                } else if(simbolo === '*') {
-                    n1 *= n
-                } else if(simbolo === '/') {
-                    n1 /= n
-                }
-
-                escrevre();
-            }*/
-
-
-            
+         
             var n2 = prompt('digite um numero');
             n2 = parseFloat(n2);
 
             escrevre(n2);
 
             function iniciarCalculo(simbolo) {
-                var n1 = document.querySelector('#output').textContent;
+                var n1 = 
+                document.querySelector('#output').textContent;
                 n1 = parseFloat(n1)
 
                 var n2= prompt('digite outro número');
                 n2 = parseFloat(n2);
 
-              
-                var msg = calcular(simbolo, n1, n2);
-                
+                try{
+                    var msg = calcular(simbolo, n1, n2);
+                } catch(e){
+                    alert(e)
+                    return
+                    /*para tratar o erro q aparecer tanto no console
+                    Tratam da excessão.
+                      ou no alerte da tela
+                    
+                  Não deveria te ocorrido, mas ocorreu*/
+                }
                 escrevre(msg)
             }
 
@@ -79,6 +56,18 @@
  
 
             function calcular(simbolo, n1, n2){
+
+                if(simbolo !== '+' && simbolo !== '-' && simbolo
+                 !== '*' && simbolo !== '/'){
+                    throw new Error('digite um simbolo valido')
+                     
+                     //mostrar erro no console
+                 }
+
+                if(isNaN(n1) || isNaN(n2)) {
+                    throw new Error('chama passando somente numeros')
+                    
+                }
 
                 var numeroCalculado = null;
 
@@ -96,10 +85,8 @@
                     case '/':
                         numeroCalculado = n1 / n2;
                         break    
-                }
-        
+                }    
                 return numeroCalculado;
-
             }
 
         </script>

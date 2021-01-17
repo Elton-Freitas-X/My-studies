@@ -1,0 +1,46 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#centralizar {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 5px solid;
+    width: 99%;
+}
+
+#caulculadora {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    background-color: aqua;
+    border-radius: 56px;
+}
+
+#numeros {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 271px;
+    height: 267px;
+}
+
+button {
+    width: 68px;
+    height: 56px;
+}
+
+#output {
+    width: 284px;
+    height: 47px;
+    font-size: 30px;
+    text-align: center;
+}

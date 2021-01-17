@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Calculadora</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    </head>
+    <body>
+            <main id="centralizar">         
+            <div id="caulculadora">
+
+                <h2>Calculadora</h2>
+
+                <div id="calculo">
+                    <button onclick="somar()">+</button>
+                    <button onclick="subtrair()">-</button>
+                    <button onclick="multiplicar()">*</button>
+                    <button onclick="dividir()">/</button>
+                </div>
+
+                <div id="output"></div>
+            </div>
+
+        </main>
+
+        <script>
+
+            var n1 = prompt('digite um numero');
+            n1 = parseFloat(n1);
+
+            escrevre();
+
+            function escrevre() {
+                var output = document.querySelector('#output');
+                output.innerHTML = n1;
+            }
+
+            function somar(){
+                var n = prompt('digite um número p/ somar')
+                n = parseFloat(n)
+                n1 += n
+                escrevre()
+            }
+
+            function subtrair(){
+                var n = prompt('digite um número p/ subtrair')
+                n = parseFloat(n)
+                n1 -= n
+                escrevre()
+            }
+
+            function multiplicar(){
+                var n = prompt('digite um número p/ multiplicar')
+                n = parseFloat(n)
+                n1 *= n
+                escrevre()
+            }
+
+            function dividir(){
+                var n = prompt('digite um número p/ dividir')
+                n = parseFloat(n)
+                n1 /= n
+                escrevre()
+            }
+    
+        </script>
+    </body>
+</html>
