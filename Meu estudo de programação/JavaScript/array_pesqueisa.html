@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+        //com o indexOf conseguimos posquisar os elementos 
+        var lista_coisas = Array()
+
+        lista_coisas['frutas'] = Array()
+
+       lista_coisas[0] = 'Banana'
+       lista_coisas[1] = 'Maçã'
+       lista_coisas[2] = 'Morango'
+       lista_coisas[3] = 'Uva'
+        
+        /*if(lista_coisas.indexOf('Uva') ===  -1) {
+            console.log('Elemento não existe')
+        }else {
+            console.log('Elemento existe e esta na posição ' + lista_coisas.indexOf('Uva'))
+        }*/
+
+        var auxiliar = lista_coisas.indexOf('Banana')
+        
+        if(auxiliar ===  -1) {
+            console.log('Elemento não existe')
+        }else {
+            console.log('Elemento existe e esta na posição ' + auxiliar)
+        }
+
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>
