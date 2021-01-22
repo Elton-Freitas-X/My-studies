@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <script>
+      
+        /* ****************WHILE********
+        var x = 1
+
+        document.write('inicio <br/>')
+
+        while(x <= 10){
+            x++
+        if( x === 5) {
+                
+            continue
+        }
+
+            document.write(x + '<br />')
+
+
+        }
+
+        document.write('fim')
+
+        ********************DO WHILE******************************
+
+           var x = 11
+      
+        do {
+            document.write(x + '<br / >')
+
+            //break
+            //continue
+
+        } while(x <= 10) 
+
+        *******************FOR***************************
+        
+
+        //for(variavel; condicacao; controle) {}
+
+        for(var x = 10; x >= 0; x -= 4){
+            document.write(x + '<br />')
+
+            //break
+            //continue
+        }
+        ***************FOR IN**********************
+        
+
+        //var listaConvidados = ['Jorge', 'Jamilto', 'Elton', 'Everton']
+        var listaConvidados = Array()
+
+        listaConvidados['a'] = 'Jorge'
+        listaConvidados[10] = 'Jamilto'
+        listaConvidados['zebra'] = 'Elton'
+        listaConvidados[-1] = 'Everton'
+        listaConvidados[true] = 'Maria'
+
+        console.log(listaConvidados)
+        for (var x in listaConvidados) {
+            console.log('índice ' + x + ' valor ' + listaConvidados[x])
+        }
+
+        *******************FOREACH***********************
+        ele nao é uma estrutura de repetição mas tbm da p/ ser usado
+        ele é uma função pertencente do objeto array
+        */
+        var listaFuncionarios = ['vivi','rosangela','miguel','lucas','fernanda']
+        
+        var f = function(valor, indice) {
+            console.log(valor, indice)
+        }
+
+        listaFuncionarios.forEach(f)
+
+        /*
+        console.log(listaFuncionarios)
+        document.write(listaFuncionarios[3])
+
+        listaFuncionarios.forEach(function(valor, indice,array){
+            //lógica
+            console.log('indice: ' + indice + ' | valor: ' + valor)
+
+            if(valor == 'lucas'){
+                array[indice] = 'UM novo valor'
+            }
+            
+        })
+        console.log(listaFuncionarios)
+        document.write('<br>' +listaFuncionarios[3])
+        //ele é uma função prototype do objeto array
+        */
+    </script>
+</head>
+<body>
+   
+</body>
+</html>

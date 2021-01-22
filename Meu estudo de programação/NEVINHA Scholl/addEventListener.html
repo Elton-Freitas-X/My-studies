@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+
+    <style>
+        #dv1 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: #f00;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+    <script>
+
+        function msg (){
+            alert('cursos de sono')
+        }
+
+        function cor1(){
+            var obg=document.querySelector('#dv1');
+            obg.style.backgroundColor='#f00'
+        }
+
+        function cor2(){
+            var obg=document.querySelector('#dv1');
+            obg.style.backgroundColor='#fff'
+        }
+
+        //Inicialização de eventos
+        function addEventos(){
+            var obg = document.querySelector('#dv1')
+            obg.addEventListener('click', msg);
+            obg.addEventListener('mouseover', cor1)
+            obg.addEventListener('mouseout',cor2)
+        //para qualquer evento q for interceptar vc usa click nao o onclick
+        }
+
+        window.addEventListener('load',addEventos)// isso para nao coolocar o onload='' no body
+        //evento onload para o script nao ficar no final da pagina, se nao nao funcionaria
+    </script>
+</head>
+<body>
+    
+    <div id="dv1"></div>
+    
+</body>
+</html>
