@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+
+    <script>
+        //try,catch throw e finally
+        //tentar,pegar, lançar e finalmente
+        //netflix
+        var video = Array()
+
+        video[1] = Array()
+        video[1]['nome'] = 'fullmetal alchemist'
+        video[1]['categoria'] = 'Anime'
+
+        function getVideo(video) {
+
+            try {
+                //logica
+                //http
+                console.log(video[0]['nome'])
+
+            } catch(erro) {//nesse "(erro)" pode ter qualquer nome de parametro 
+                        //desde que respeite as regras de digitar uma variavel
+                tratarErro(erro)
+                console.log('Agora sim podemos tratar esse erro')
+                throw new Error('Houve um erro mas nao se preocupe, estamos trabalahdno nisso agora!!!')
+
+            } finally {
+                console.log('Sempre passa por aqui (try / catch)')
+            }
+
+            console.log('A aplicação não morreu')
+        }
+        getVideo(video)
+
+        function tratarErro(e) {
+            //logica para registrar o erro no servidor
+            console.log(e)
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+    
+   
+</body>
+</html>

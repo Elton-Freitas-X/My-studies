@@ -30,6 +30,7 @@
     </script>-->
 
 <script>
+    /*
     //FLEXIBILIDADE E PARAMENTROS
 
     function soma(a, b) {
@@ -41,6 +42,18 @@
     console.log(soma(7, 7, 9, 15))//desconsidera os parametros adicionais
     console.log(soma(7)) // ira dar Not a number por causa do valor de b ser undefined
     console.log(soma()) // ira dar not a number tbm, pelos valores ser undefined
+    */
+
+   function soma(){
+       var resultado = 0  
+       for(var i in arguments) {
+           resultado += arguments[i]
+       }
+       return resultado
+   }
+   //tecnica de parametros variaveis
+   console.log(soma(7, 6, 3.2,' Texto'))
+
 </script>
 </head>
 <body>
