@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>
+           Logica de programação
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>
+            Lógica de programação JS 
+        </h1>
+        <div id="output"></div>
+    </body>
+    <script>
+        /*sao conjunto de dados agrupados em chaves "{}"
+        A Diferença entre Arrays e Objetos
+        Em JavaScript, os arrays usam índices numerados. 
+        Em JavaScript, os objetos usam índices nomeados. 
+        Arrays são um tipo especial de objetos, com índices numerados.
+        */      
+
+        var produto1 = new Object();
+        produto1.nome = "caneta";//o "nome" é uma propriedade criada
+        produto1.preco = 2.2;   
+        produto1.estoque = 10;
+        // o metodo é uma funçao atrelada ao objeto
+        produto1.comprar = function(qtd){
+            if(!qtd) {
+                qtd = 1;
+            }
+            console.log('comprou a caneta')
+            //this.estoque--;
+            this.estoque = this.estoque - qtd
+            console.log(this.estoque)//é uma referencia ao objeto
+        }
+
+        var msg = '';
+
+        msg += 'nome: ' + produto1.nome + '<br>';
+        msg += 'preco: ' + produto1.preco + '<br>';
+        msg += 'estoque: ' + produto1.estoque + '<br>';
+
+        document.querySelector('#output').innerHTML = msg;
+    </script>
+    
+</html>

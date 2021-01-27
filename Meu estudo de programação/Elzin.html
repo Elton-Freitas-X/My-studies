@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+
+    <script>
+        
+        var num1 = prompt('Digite um número')
+        var num2 = prompt('Digite outro número')
+        num1 = parseFloat(num1)
+        num2 = parseFloat(num2)
+
+        function resultado(){
+            if(num1 + num2){
+                document.write('O resultado é: ' + (num1+num2))
+            }
+        }
+
+        resultado()
+
+        function acao(){
+            alert('clica mt esse menino')
+        }
+
+    </script>
+
+
+</head>
+<body>
+
+    <div onclick = 'acao()' style="background: #ccc; height: 150px; width: 150px;"></div>
+    <!--
+        onclick
+        ondblclick
+        onmouseup
+        onmouseover
+        onmouseout
+    -->
+   
+</body>
+</html>
