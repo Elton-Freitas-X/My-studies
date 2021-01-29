@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>
+           Logica de programação
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>
+            Lógica de programação JS 
+        </h1>
+        <div id="output"></div>
+    </body>
+    <script>
+        /*
+        var dados = [
+            {"nome": "Elton", "email": "elton@outlook.com"},
+            {"nome": "Everton", "email": "vertto15@outlook.com"},
+            {"nome": "Evelyn", "email": "evelyn@hotmail.com"}
+        ]
+
+        var msg = ''
+
+        for(var i = 0; i < 3; i++){
+            msg += "<h2>Dados: " + dados[i].nome +" </h2>";
+            msg += "<p>email: " + dados[i].email + " </p>";
+        }
+
+        document.querySelector('#output').innerHTML = msg
+        */
+
+        var user1 = new Object();
+        user1.nome = "Elton"
+        user1.email = "elton@outlook.com"
+
+        var user2 = new Object();
+        user2.nome = "Everton"
+        user2.email = "vertto15@outlook.com"
+
+        var user3 = new Object();
+        user3.nome = "Evelyn"
+        user3.email = "evelyn@hotmail.com"
+
+        var users = new Array(user1, user2,user3)
+
+        var x = 0
+        var msg = ''
+
+        while(users[x]){
+            console.log(users[x]);
+            msg += users[x].nome + ' e ' + users[x].email +'<br>';
+            x++
+        }
+    
+        document.querySelector('#output').innerHTML = msg
+
+    </script>
+    
+</html>
