@@ -3,33 +3,45 @@
 <head>
     <meta charset="utf-8">
     <title>JavaScript</title>
-
     <script>
-        
-        var num1 = prompt('Digite um número')
-        var num2 = prompt('Digite outro número')
-        num1 = parseFloat(num1)
-        num2 = parseFloat(num2)
 
-        function resultado(){
-            if(num1 + num2){
-                document.write('O resultado é: ' + (num1+num2))
-            }
+        function cor1(){
+            var color = document.querySelector("#DIV");
+            color.style.backgroundColor='blue'
+            color.style.color='gray'
         }
 
-        resultado()
+        function cor2(){
+            var color = document.querySelector("#DIV");
+            color.style.backgroundColor = 'green';
+            color.style.color = 'red';
+        }
+
+        function cor3(){
+            var color = document.querySelector("#DIV");
+            color.style.backgroundColor = 'yellow'
+            color.style.color='blue'
+        }
 
         function acao(){
-            alert('clica mt esse menino')
+            var color = document.querySelector("#DIV");
+            color.addEventListener("click", cor1);
+            color.addEventListener("mouseover",cor2);
+            color.addEventListener("mouseout",cor3);
         }
 
+        window.addEventListener('load', acao)
     </script>
-
-
 </head>
 <body>
 
-    <div onclick = 'acao()' style="background: #ccc; height: 150px; width: 150px;"></div>
+    <div id="DIV" style="background: gray; height: 150px; width: 150px; text-align: center;">
+
+        <h3 style="padding-top: 35px;">Olá mundo</h3>
+        <input type="text" style="width: 77%; margin-bottom: 10px; outline: 0;">
+        <button>Adicionar</button>
+
+    </div>
     <!--
         onclick
         ondblclick
@@ -37,6 +49,5 @@
         onmouseover
         onmouseout
     -->
-   
 </body>
 </html>

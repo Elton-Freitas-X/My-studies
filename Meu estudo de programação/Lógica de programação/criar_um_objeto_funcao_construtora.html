@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+</head>
+<body>  
+    <h1>Lógica de programação com JavaScript</h1>
+
+    <div id="output"></div>
+    <script>
+        /*
+       //sintaxe formal
+        var obj = new Object();
+        //nesse objeto podemos incluir propriedades e metodos
+        //propriedades é mt parecido com variaveis
+        //e metodos sao parecidos com funções
+        obj.nome = 'meu objeto';
+        obj.funcao = function(){
+            console.log('eu sou um metodo')
+        }
+
+        console.log(obj.nome)
+        obj.funcao()
+
+        //sintaxe literal
+        var obj2 = {
+            nome: 'meu objeto 2',
+            funcao: function(){
+                console.log('eu sou o metodo do obj2')
+            }
+        }
+
+        console.log(obj2.nome)
+        obj2.funcao()
+
+        //Objetos customizados
+        var endreco1 = {
+            'logradouro': 'rua tal',
+            'numero': 2
+        }
+
+        var endreco2 = {
+            'logradouro': 'rua aquela',
+            'numero': 20
+        }
+
+        var endreco3 = {
+            'logradouro': 'rua essa',
+            'numero': 10
+        }
+
+        var minhArray = new Array(1,2,3)
+        var hoje = new Date()
+        var bj3 = new Object()
+
+        function Endereco (log, n, cep) {
+            //por padrao funcoes q começa com a letra maisculo 
+            //sao funcoes construtoras 
+            //e é inplicito q vc so pode usar o operador "new Endereco()"
+            this.logradouro = log
+            this.n = n
+            this.cep = cep
+
+            this.enderecoCompleto = function(){
+                return this.logradouro + ', ' + this.n;
+            }
+        }
+
+        var endereco1 = new Endereco('rua tal', 2, '1235-12345')
+        var endereco2 = new Endereco('rua dessa', 10, '42244-12332')
+
+        console.log(endereco2.enderecoCompleto())
+        */
+
+        function Endereco(dados){;
+            this.logradouro = dados.logradouro || ''
+            this.n = dados.n || 0;
+            this.complemento = dados.complemento;
+            this.cidade = dados.cidade;
+            this.estado = dados.estado;
+            this.cep = dados.cep;
+        }
+
+        var alunos = [//isso sao instâncias de um objeto Endereco
+            {nome: 'daniel', id:112233,endereco: new Endereco({logradouro:'rua faz de conta', n: 2, complemento: 'ap 3',
+            cidade: 'São Paulo', estado: 'SP', cep: '11111-1111'})},
+            {nome: 'josé', id:112244, endereco: new Endereco({logradouro:'rua belezura', n: 5,
+            cidade: 'São Paulo', cep: '2222-2222'})},
+            {nome: 'joão', id:113344, endereco: new Endereco({logradouro:'rua belezura', n: 20,
+            cidade: 'São Pualo', cep: '2222-222'})},
+            {nome: 'marta', id:114444, endereco: new Endereco({logradouro:'rua chuchu', n: 1,
+            estado: 'RJ', cep: '2222-222'})},
+            {nome: 'ana', id:114555, endereco: new Endereco({logradouro:'Av belezura', n: 41,
+            estado: 'SP', cep: '3333-333'})}
+        ]
+
+    </script>
+</body>
+</html>

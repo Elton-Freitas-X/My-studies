@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+</head>
+<body>  
+    <h1>Lógica de programação com JavaScript</h1>
+
+    <div id="output"></div>
+    <script>
+       
+ 
+
+        var msg = "";
+
+        var daniel = {
+            nome: 'daniel',
+            sobrenome: 'tapias morales',
+            rg: '11.222.333-44',
+            tel: '988358284'
+        }
+
+        for (propriedade in daniel){
+            console.log(propriedade,':' ,daniel[propriedade])
+        }
+        // com o loop for in consegue interar sobre as propriedades de um objeto
+     
+        document.querySelector('#output').innerHTML = msg
+
+    </script>
+</body>
+</html>
