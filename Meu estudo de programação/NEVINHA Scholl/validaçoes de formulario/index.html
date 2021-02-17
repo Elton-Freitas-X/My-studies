@@ -37,36 +37,90 @@
 
 <script>
     const filds = document.querySelectorAll("[required]")
-    
-    function custumValidation(event) {
-        const fild = event.target
 
-        //logica para verificar se existem erros
-        function verifyErros() {
+    function Validatefild(fild) {
+         // logica para verificar se existem erros
+         function verifyErros() {
             let foundError = false;
 
-            for(let error in fild.validity) {
-                if (error != 'customError' && fild.validity[error]){
-                    foundError = true
+            for(let error in fild.validity){
+                // se nao for customError
+                //entao verifica se tem erro
+                if (fild.validity[error] && !fild.validity.valid ){
+                    foundError = error
                 }
             }
-
             return foundError;
         }
 
+        function customMessege(typeError) {
+            const messesges = {
+                text: {
+                    valueMissing: "Por favor, preencha este campo"
+                },
+                email: {
+                    valueMissing: "Email é obrigatório",
+                    typeMismatch: "Por favor, preencha um email válido"
+                }
+            }
+            return messesges[fild.type][typeError]
+        }
+
+        function setCustomMessege(messege){
+                const spanError = fild.parentNode.querySelector("span.error")
+
+                if (messege) {
+                    spanError.classList.add("active")
+                    spanError.innerHTML = messege
+                } else {
+                    spanError.classList.remove("active")
+                    spanError.innerHTML = ""
+                }
+            }
+
+                return function() {
+
+                    const error = verifyErros()
+                    
+                if(error) {
+                    const messege = customMessege(error)
+                    
+                    fild.style.borderColor = 'yellow'
+                    setCustomMessege("Campo Obrigatório")
+            }   else {
+                    fild.style.borderColor = 'green'
+                    setCustomMessege()
+            }
+        }
+    }
+          
+    function custumValidation(event) {
+        // eliminar o bubble
+        event.preventDefault()
+
+        const fild = event.target
+
+        const validation = Validatefild(fild)
+
+        validation()
+           
     }
 
-    const error = verifyErros()
-    console.log("Error Exists:", error)
 
-    for (fild of filds){
-        fild.addEventListener("invalid", custumValidation)
+        for (fild of filds){
+            fild.addEventListener("invalid", event => {
+                // eliminar o bubble
+                event.preventDefault()
+
+                custumValidation(event)
+            })
+            fild.addEventListener("blur", custumValidation)
     }
 
-    document.querySelector("form")
-    .addEventListener("submit", (event) => {
-        console.log("enviar o formlario")
-
+        document.querySelector("form").addEventListener("submit", (event) => {
+        console.log("dados do formulario escrito")
+        
+        // nao vai enviar o formulario
         event.preventDefault()
     })
 </script>
