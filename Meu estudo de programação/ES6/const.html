@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+    //a diferença da CONST p/ as outras é q o valor dela nao pode ser alterado
+    //ate pode, mas dará um erro
+    //VAR = sofre rosting pega o escopo onde ele foi criado
+    //      e o outro escopo mais proximo
+    const SERIE = "Friends"
+
+        function x () {
+            const SERIE = "The Walking Dead"
+            console.log("dentro da função: " + SERIE)
+            //AQUI O VALOR PODE MUDAR PQ O ESCOPO NAO É O MSM
+        }
+        x()
+
+    console.log("escopo global: " + SERIE)
+
+  
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type="text/babel">
+    // babel é so para uso de browsers antigos, p/ os codigos funfarem
+    //3 escopos: global, funlçao e bloco
+
+    let serie = 'Friends'
+
+    {
+      let serie = "the wakling dead" 
+      console.log("dentro do bloco " + serie)
+    }
+
+    console.log('fora do bloco: ' + serie)
+        
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>
