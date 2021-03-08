@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>
+           Logica de programação
+        </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>
+            Lógica de programação JS 
+        </h1>
+        <div id="output"></div>
+    </body>
+    <script>
+
+        
+        function malhar(idade, peso) {
+            if (idade < 28) {
+                peso = peso - 2
+            } else {
+                peso = peso - 1
+            }
+            return peso;
+        }
+      
+        function inicio() {
+            var nome_usuario = prompt("digite seu nome")
+
+            var vezesMalhou = 0
+            vezesMalhou = parseInt(vezesMalhou)
+            
+            var idade_usuario = prompt("dogote sua idade")
+            idade_usuario = parseInt(idade_usuario)
+
+            var peso_usuario = prompt("digite seu peso") 
+            peso_usuario = parseFloat(peso_usuario)
+
+            var peso_desejado = prompt("digite o peso desejado")
+            peso_usuario = parseFloat(peso_usuario)
+
+            while (peso_usuario > peso_desejado) {
+                peso_usuario = malhar(idade_usuario, peso_usuario)
+                vezesMalhou = vezesMalhou + 1
+            }
+            console.log(vezesMalhou)
+            document.write(
+            nome_usuario +  " voce precisa malhar " 
+            + vezesMalhou + " vezes para chegar no seu peso ideial" )
+        }
+        inicio()
+
+        
+        
+
+        
+    </script>
+    
+</html>

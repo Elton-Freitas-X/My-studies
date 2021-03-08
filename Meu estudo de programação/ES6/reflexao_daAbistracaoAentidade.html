@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script>
+
+        //Paradigma Procedural (oque foi usado ate agora)
+        //let quantidade_pernas = 4
+        //let giratoria = false
+        //let cor = azul
+        /*
+        let cadeiras = Array()
+
+        cadeiras[0] = Array()
+        cadeiras[0]['quatidade de pernas'] = 4
+        cadeiras[0]['giratoria'] = false
+        cadeiras[0]['cor'] = 'azul' 
+
+        cadeiras[1] = Array()
+        cadeiras[1]['quatidade de pernas'] = 1
+        cadeiras[1]['giratoria'] = true
+        cadeiras[1]['cor'] = 'vermelho'
+
+        function girar_cadeira(indice) {
+            if(cadeiras[indice]['giratoria'] === true){
+                console.log('girou')
+            } else {
+                console.log('cadeira nao é giratória')
+            }
+        }
+
+        function adicionar_cadeira(quantidade_pernas, giratoria,cor){
+            let cadeira =Array()
+
+            cadeira['quantidadedepernas'] = quantidade_pernas
+            cadeira['giratoria'] = giratoria
+            cadeira['cor'] = cor
+
+            cadeiras.push(cadeiras)
+        }
+
+        adicionar_cadeira(3, false,'verde')
+
+        console.log(cadeiras)
+
+        //girar_cadeira(1)
+        */
+        //padadigma de OO
+
+        class Cadeira {
+            constructor(quantidade_pernas,giratoria,cor){
+                this.quantidade_pernas = quantidade_pernas
+                this.giratoria = giratoria
+                this.cor = cor
+            }
+
+            girarCadeira() {
+                if(this.giratoria ===  true) {
+                    console.log('girou')
+                } else {
+                    console.log('cadeira nao é giratória')
+                }
+            }
+        }
+        let cadeiras = Array()
+
+        cadeiras.push(new Cadeira(3,false, 'azul'))
+        cadeiras.push(new Cadeira(4,true, 'vermelha'))
+        
+       console.log(cadeiras)
+
+
+
+       class Sofa {
+           constructor(quant_lugares,enclinavel,cor) {
+               this.quant_lugares = quant_lugares
+               this.enclinavel = enclinavel
+               this.cor = cor
+           }
+
+           sofaEnclinavel() {
+               if(this.enclinavel === true) {
+                   console.log('da pra dormir pow')
+               } else {
+                   console.log('nao da pow, so sentar')
+               }
+           }
+       }
+
+    /* let sofa = new Sofa(2, false, 'green')
+     let sofa2 = new Sofa(4, true, 'vermelho')
+
+     //console.log(sofa)
+     sofa.sofaEnclinavel()*/
+
+     let sofas = Array()
+
+    sofas.push(new Sofa(2,false, 'verde'))
+    sofas.push(new Sofa(4,true, 'azul'))
+
+    console.log(sofas)
+    
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulamento</title>
+    <script>
+        class Tv {
+            constructor() {
+                this._relacaoCanais = Array(2,4,5,7, 10)
+                this._canalAtivo = 5
+                this._volume = 5
+            }
+
+            //getters setters
+            get canalAtivo() {
+                return this._canalAtivo
+            }
+
+            set canalAtivo(canal) {
+                //  alterar o canal
+               if (this._relacaoCanais.indexOf(canal) !== -1) {
+                this._canalAtivo = canal
+               }               
+            }
+        }
+
+        let tv = new Tv()
+
+        //essa é a pseudo variavel, aqui esta chamando metodo set
+        //para poder alterar, e tbm passando qual sera o valor "7"
+        tv.canalAtivo = 7
+        //tv.canalAtivo(7)
+
+        console.log(tv.canalAtivo)
+
+ 
+
+    //Em JavaScript praticamente qualquer tipo de dado é um objeto. 
+    //Cada item dessa "coleção de valores", é chamado de propriedade. 
+    //Cada propriedade é composta por um par de "nome: valor". 
+    //Quando uma propriedade armazena uma função,
+    //ela se torna o que chamamos de método.
+
+
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>
