@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Factory</title>
+    <script>
+
+      let Bicicleta1 ={
+          cor:'Branca',
+          marcha:'unica',
+          aro:12,
+          pedalar() {consolo.log('metodo pedalar executado') }
+      }
+
+      let Bicicleta2 ={
+          cor:'Vermelha',
+          marcha:'18',
+          aro:26,
+          pedalar() {consolo.log('metodo pedalar executado') }
+      }
+
+      console.log(Bicicleta1)
+      console.log(Bicicleta2)
+
+      let BicicletaFactory = function(cor, marcha, aro) {
+          return {
+              cor,
+              marcha,
+              aro,
+              pedalar() {console.log('metodo pedalar executado') }
+          }
+      }
+
+      let Bicicleta3 = BicicletaFactory('preto', 20, 56)
+      console.log(Bicicleta3)
+
+      let Bicicleta4 = BicicletaFactory('rosa', 25, 30)
+      console.log(Bicicleta4)
+
+      //console.log(`Cor: ${Bicicleta3.cor}`)
+      //Bicicleta3.pedalar()
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

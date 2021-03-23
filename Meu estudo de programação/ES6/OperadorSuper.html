@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Super</title>
+    <script>
+
+        class Animal {
+            constructor(cor, tamanho, peso, patas){
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+                this.patas = patas
+            }
+
+            dormir() {
+                console.log('dormir')
+            }
+        }
+
+        class Passaro extends Animal {
+            constructor(bicoo, cor, tamanho, peso, patas){
+                super(cor, tamanho, peso , patas)
+                this.bico = bicoo;
+            }
+
+            voar() {
+                console.log('Voar')
+            }
+        }
+
+        class Papagaio extends Passaro {
+            constructor(sabeFalarr, cor, tamanho, peso, patas) {
+                super('Médio', cor, tamanho, peso, patas)
+                this.sabeFalar = sabeFalarr
+            }
+
+            falar() {
+                console.log('Falar')
+            }
+        }
+
+        class Cao extends Animal {
+            constructor(sabeLatirr, cor, tamanho, peso, patas){
+                super( cor, tamanho, peso , patas)
+                this.sabeLatir = sabeLatirr
+            }
+
+            rosnar() {
+                console.log("sabe latir")
+            }
+        }
+
+        let x = new Papagaio(true, 'verde', 25, 350, 2)
+        console.log(x)
+
+        let y = new Cao(true, 'preto',1.5,40, 4)
+        console.log(y)
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

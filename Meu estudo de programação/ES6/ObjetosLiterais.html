@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Literal</title>
+    <script>
+
+        class Produto {
+            constructor(descricao,preco){
+                this.descricao = descricao
+                this.preco = preco
+            }
+
+            verDescricao() {
+                console.log(`${this.descricao} por apenas ${this.preco}`)
+            }
+        }
+       
+        let produto = new Produto('Notebook', 2200)
+        produto.verDescricao()
+
+        //********************************************** 
+
+        let produtoLiteral = {
+            discrisaum: 'PC',
+            precou: 2000,
+            verdiscrisaum: function(){
+                console.log(`${this.discrisaum} por apenas ${this.precou}`)
+            }
+        }
+
+        produtoLiteral.verdiscrisaum();
+
+
+        // formlario > sevidor 
+            // recupera dados e monta um objeto literal
+                // obj literal > JSON > HTTP > SERVER > ARMAZENA
+
+        //*************formas mais enxutas**********\\
+
+        let nome = 'Jorge' //document.
+        let idade = 29
+        let sexo = 'Masculino'
+        let profissao = 'Programador'
+
+        let objeto = {
+            nome: nome,
+            idade: idade,
+            sexo: sexo,
+            profissao: profissao,
+            exibirResumo: function(){
+                console.log(`${this.nome},${this.idade} anos,${this.sexo} é ${this.profissao}`)
+            }  
+        }
+
+        console.log(objeto)
+        objeto.exibirResumo()
+
+        let objeto2 = {
+            nomeTeste:nome, //nome = nome variavel / valor = valor da variavel
+            idade,
+            sexo,
+            profissao,
+            exibirResumo(){
+                console.log(`${this.nomeTeste},${this.idade} anos,${this.sexo} é ${this.profissao}`)
+            }  
+        }
+
+        console.log(objeto2)
+        objeto2.exibirResumo()
+
+
+        
+
+
+        //*******************MODIFICANDO VALORES*****************
+
+        let pessoa = {
+            nome: 'José',
+            idade: 45
+        }
+
+        console.log(pessoa.nome, pessoa.idade)
+
+        pessoa.nome = 'FERNANDAA(valor modificado)'
+        pessoa.idade = 25
+
+        console.log(pessoa.nome, pessoa.idade)
+
+
+
+        //****INCLUSA ATRIBUTOS/CRIAÇÃO DINAMICA DE PARES NOME/VALOR
+
+        let menina = {
+            nome: 'Maria',
+            idade: 25
+        }
+        console.log(menina)
+
+        //ADICIOANNDO UM NOVO NOME E VALOR 
+
+        menina.sexo = 'Feminino'
+        console.log(menina)
+
+        menina.DizerOI = () => console.log('oi mundo,vou lascar vcs')
+        menina.DizerOI()
+
+
+
+
+                    //************************************\\
+        //todo objeto literal é um objeto unico dentro da aplicação
+
+        let assinatura = {
+            idClient: 'Elzin',
+            idade: 11,
+            descricao: 'Acesso a net',
+            status() {
+                console.log('ativo')
+            }
+        }
+
+        let y = assinatura
+        console.log(y.descricao)
+
+        y.descricao = 'TA SEM ACESSO(VALOR ALTERADO'
+
+        console.log(y.descricao)
+        console.log(assinatura.descricao)
+
+    </script>
+</head>
+<body>
+    <div id="output"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Herança</title>
+    <script>
+
+        //TODOS SAO FILHOS DE PROTOTYPE
+
+        Object.prototype.attr50 = 'z' //cuidado esse tipo de implementação, pq é global
+
+        let animal = { attr1: 'a'}
+        let vertebrado = {__proto__: animal, attr2: 'b'}
+        let ave = {__proto__: vertebrado, attr3: 'c', attr2: 'x(sobrepondo)'}
+
+        //apartir de ave, vc tera todos os attr por HERANÇA
+
+        console.log(ave.attr3,ave.attr2, ave.attr1, ave.attr50) 
+
+    </script>
+</head>
+    <body>
+        <div id="output"></div> 
+    </body>
+</html>

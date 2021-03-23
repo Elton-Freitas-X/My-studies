@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring   </title>
+    <script>
+
+        //Destructuring É um operador de desetruturação
+        //ele tira valores de uma estrutura
+
+        let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+
+        //let a = frutas[0]
+        //let b = frutas[1]     O PROBLEMA QUE ESSE METODO É MT VERBOSO
+        //let c = frutas[2]
+        //console.log(a , b, c)
+
+
+        //colchetes a esquerde, significa que ira desestrutrar um array
+
+        //let [ a, b, ,c] = frutas //pular um indice
+
+        //podemos usar parametros default e atribuir novos valores para novos parametros
+        let [ a, b = 'Abacate', c, d, e = 'Maçã' ] = frutas    // " = " se chama operador de atribuição
+
+        //console.log(a , b, c, d, e)
+
+        let coisas = [['Abacaxi', 'Uva', 'Pera', 'Mamão'], ['Jose', 'Maria']]
+        let [[, ,p],[, m]] = coisas
+
+        console.log(m)
+        console.log(p)
+    </script>
+</head>
+    <body>
+        <div id="output"></div> 
+    </body>
+</html>

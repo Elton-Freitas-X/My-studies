@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>React JS</title>
+    <script>
+
+        /* **************SOBRE FUNÇÃO***********
+        function fF() {
+            var area = document.getElementById('area');
+            var texto = prompt('digite seu nome');
+
+            if(texto === null || texto == ''){
+                area.innerHTML = 'Campo vazio, digite seu nome'
+            } else {
+                area.innerHTML = 'bem vindo ' + texto;
+            }
+        }
+
+        function fF2(nome, idade){
+            var area = document.getElementById('area');
+            var texto = prompt('digite seu sobrenome');
+
+            area.innerHTML = nome + texto + ' Ele tem ' + idade + ' anos'
+        }
+
+        //********Arrays**********
+
+        var list = ['VERTTO', 27, 'ELTON', 23, 'VEVE', 21];
+        console.log(list.length, list[2])
+        console.log(list.indexOf(21))
+
+        //list.join(" / ");
+        //list.pop() remover ultimo item
+        //list.shift() remover o primeiro
+        //list.push('Leda do bolo'); add um na lista
+
+
+        /*****estrutura de repetição while
+         
+ 
+        x = 0
+
+          while(x < 10){
+              document.write("<br/> O valor do X e : " + x)
+
+              x++} 
+
+          document.write("<br/><br/><hr>");
+
+        x = 5
+          //for = para
+
+          for (a = 0; a < x; a++) {
+              document.write("<br/> O valor do X: " + a);}
+*/
+
+             //***********SWITCH **********\\
+            document.write("<br/> Escolha seu pedido: </br>")
+            document.write("<br/> 0 é sorverte // 1 Suco </br>")
+            document.write("<br/> 2 Coca cola / 3 - Agua gelada </br>")
+
+             function Pedido() {
+                x = prompt('digite de 0 a 2')
+
+             switch(x){
+
+                case "0":
+                    alert('X é sorverte')
+                break;
+
+                case "1" : 
+                    alert('X é Suco')
+                break;
+
+                case "2" : 
+                    alert('X 2 Coca cola')
+                break;
+
+                default: 
+                   alert('Ops, não temos essa opcão');
+                   break
+             }
+             }
+    </script>
+</head>
+<body>
+    <!-- ****************Sobre Função***********
+    <div id="area"></div>
+
+  <button onclick="fF()">COLOCAR TEXTO</button>
+
+  <br/><br/>
+  <div id="area2"></div>
+
+  <button onclick="fF2('Elton ', 23)">COLOCAR TEXTO2</button>
+    -->
+
+    <button onclick="Pedido()">Fazer Pedido</button>
+
+</body>
+</html>

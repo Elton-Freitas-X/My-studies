@@ -9,11 +9,13 @@
         class Tv {
             constructor() {
                 this._relacaoCanais = Array(2,4,5,7, 10)
-                this._canalAtivo = 5
+                this._canalAtivo = 5 //MUDANDO ESSE VALOR
                 this._volume = 5
             }
 
-            //getters setters
+            //********getters setters********
+
+            //ISSO É UM METODO 
             get canalAtivo() {
                 return this._canalAtivo
             }
@@ -21,7 +23,7 @@
             set canalAtivo(canal) {
                 //  alterar o canal
                if (this._relacaoCanais.indexOf(canal) !== -1) {
-                this._canalAtivo = canal
+                this._canalAtivo = canal //canal é o novo valor abaixo que coloquei
                }               
             }
         }
