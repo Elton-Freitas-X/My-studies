@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Javascript</title>
+    <script>
+        
+        function acao() {
+            document.write("Executando...<br/>")
+        }
+
+        // Executa de tempo em tempo! 
+        //ele executa em milli  segundos ou seja 1000 = 1 sec
+        //a cada 1 segundo ele vai botando mais 1 
+
+        //SE QUISER PARAR, CRIE UMA FUNÇÃO PARA UM BOTAO QUE 
+        //atribua o setInverval a uma variavel 
+        //execute o     clearInterval(time); 
+        //function Parar() {
+        //    clearInterval(timer);
+        //}
+
+
+        var timer = setInterval(acao, 1000);
+
+
+        //ele executa uma vez dps para
+        //setTimeout(acao, 3000);
+        
+
+        
+    </script>
+</head>
+<body>
+
+    <!--<button onclick="Parar()">Parar</button>-->
+   
+</body>
+</html>

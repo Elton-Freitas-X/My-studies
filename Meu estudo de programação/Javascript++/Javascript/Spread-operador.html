@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SPREAD OPERADOR</title>
+   
+</head>
+<body>
+
+    <div id=""></div>
+   
+</body>
+<script>
+    
+    //let primeiro = [1,2,3];
+
+   // let numeros = [4,5,6];
+
+    //console.log(...primeiro, ...numeros)
+
+    function cadastroPessoa(info){
+        let novosDadaos = {
+            ...info,
+            cargo: 'Programador',
+            status: 1,
+            codigo: '70122sss-81'
+        };
+        return novosDadaos;
+    }
+
+    console.log(cadastroPessoa({nome: 'Matheus', sobrenome: 'Fraga', 
+    anoInicio: 2045}));
+    //o info passado por parametro é tudo que estar dentro desse objeto
+</script>
+</html>

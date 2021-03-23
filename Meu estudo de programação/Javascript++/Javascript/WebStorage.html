@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Web Storage JS...</title>
+   
+</head>
+<body>
+
+    <div id="nome"></div>
+   
+</body>
+<script>
+    var nome = '';
+
+    if(typeof localStorage.nome == 'undefined') {
+        localStorage.nome = prompt("digite seu nome");
+    }
+
+    nome = localStorage.nome
+
+    document.getElementById("nome").innerHTML = nome;
+
+    //criar algum dado para colocar no localStorage   (NO SEU BROWSER)
+    //localStorage.setItem("chave", "valor da chave")
+    
+    //RECUPERAR CHAVE
+    //localStorage.getItem("chave") ou localStorage.nome <--NOME DA CHAVE
+
+    //Remover chave 
+    //localStorage.removeItem("chave")  <--nome da chave criada anteriormente
+
+    //e para usar o " sessionStorage. " é a mesma coisa so passar se vc quer
+    //criar pegar ou remover a chave, mas quando for atualizar a tela
+    //tudo sera perdido  
+
+    
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SPREAD OPERADOR</title>
+   
+</head>
+<body>
+
+    <div id=""></div>
+   
+</body>
+<script>
+   
+   // function minhaLista(...nomes){
+    //    console.log(nomes);
+   // }
+
+   // minhaLista("Matheus", "lucas", 'Eltin');
+
+    function cadastrar(usuarios, ...novosUsuarios){
+        let totalususarios = [...usuarios,...novosUsuarios ];
+
+        return console.log(totalususarios)
+    }
+
+    let usuarios = ["Matheus", "Joao"];
+
+    let novosUsuarios = cadastrar(usuarios, "Henrique", "Lucas");
+
+
+</script>
+</html>

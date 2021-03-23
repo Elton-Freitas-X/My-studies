@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Desconstrução de arrays e objetos</title>
+   
+</head>
+<body>
+
+    <div id=""></div>
+   
+</body>
+<script>
+    
+    const pessoa = {
+        nome: 'Matheus',
+        sobrenome: 'fraga',
+        idade: 50,
+        cargo:'desempregado'
+    };
+
+    //descontruindo, tirando do array e criando uma 
+    //variavel fora do array
+    let { nome } = pessoa
+
+    // OU
+
+    //let { nome, cargo } = pessoa
+
+    console.log(nome)
+
+    //se quiser mudar o nome da variavel
+
+    let { nome:nomeAlterado } = pessoa;
+
+    nomeAlterado = 'ELTON ALTERADO'
+
+    console.log(nomeAlterado)
+
+
+    //********************Objetos
+
+    
+    //descontruindo, tirando do objto e criando uma 
+    //variavel fora do objeto
+
+    const nomes = ['Matheus','Cecilia'];
+
+    let { 1:VCecilia } = nomes
+
+    console.log(VCecilia)
+
+    //*************criando variaveis direto******meu termo XD
+
+    let pessoas = ['CC', 'mirian', 'vitoria', 'tia lane'];
+
+    let [ irmaVelha, doMeio, maisNova, mae ] = pessoas;
+
+    console.log(irmaVelha)
+    console.log(maisNova)
+   
+</script>
+</html>
