@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#Centralize {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forma {
+  background: -webkit-linear-gradient(top, #7579ff, #b224ef);
+  height: 69vh;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border-radius: 30px;
+}
+
+label {
+  text-align: center;
+  width: 100%;
+  font-size: 27px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: #fff;
+  font-size: 32px;
+}
+
+input {
+  border-radius: 7px;
+  text-align: revert;
+  width: 379px;
+  height: 39px;
+  outline: none;
+  font-size: 19px;
+  padding: 0px 0px 0px 10px;
+  border-bottom: solid pink;
+}
+
+#alinhar1 {
+  display: flex;
+  justify-content: inherit;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+#alinhar2 {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+button:hover {
+  background: -webkit-linear-gradient(top, #7579ff, #b224ef);
+  transition: all 0.4s;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+}
+
+#imagem {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+img {
+  width: 120px;
+  height: 132px;
+  border-radius: 81px;
+}

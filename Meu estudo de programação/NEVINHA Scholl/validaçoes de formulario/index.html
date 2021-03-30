@@ -1,128 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation with HTML API</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Form Validation with HTML API</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap"
+    />
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap">
-
-  <!--<script src="script.js" defer></script>
+    <!--<script src="script.js" defer></script>
     para que funcione mesmo antes da pagina ser redenrizada
     nesse caso vc evita colocar o script no final da pagina-->
-</head>
+  </head>
 
-<body>
-
+  <body>
     <form action="">
-        <h2>Entrar na lista</h2>
-        
-        <div class="input">
-            <input required type="text"/>
-            <label for="">Nome</label>
-            <span class="error"></span>
-        </div>
+      <h2>Entrar na lista</h2>
 
-        <div class="input">
-            <input  required type="email"/>
-            <label for="">Email</label>
-            <span class="error"></span>
-        </div>
+      <div class="input">
+        <input required type="text" />
+        <label for="">Nome</label>
+        <span class="error"></span>
+      </div>
 
-        <button type="submit">Enviar</button>
+      <div class="input">
+        <input required type="email" />
+        <label for="">Email</label>
+        <span class="error"></span>
+      </div>
+
+      <button type="submit">Enviar</button>
     </form>
-</body>
+  </body>
 
-<script>
-    const filds = document.querySelectorAll("[required]")
+  <script>
+    const filds = document.querySelectorAll("[required]");
 
     function Validatefild(fild) {
-         // logica para verificar se existem erros
-         function verifyErros() {
-            let foundError = false;
+      // logica para verificar se existem erros
+      function verifyErros() {
+        let foundError = false;
 
-            for(let error in fild.validity){
-                // se nao for customError
-                //entao verifica se tem erro
-                if (fild.validity[error] && !fild.validity.valid ){
-                    foundError = error
-                }
-            }
-            return foundError;
+        for (let error in fild.validity) {
+          // se nao for customError
+          //entao verifica se tem erro
+          if (fild.validity[error] && !fild.validity.valid) {
+            foundError = error;
+          }
         }
+        return foundError;
+      }
 
-        function customMessege(typeError) {
-            const messesges = {
-                text: {
-                    valueMissing: "Por favor, preencha este campo"
-                },
-                email: {
-                    valueMissing: "Email é obrigatório",
-                    typeMismatch: "Por favor, preencha um email válido"
-                }
-            }
-            return messesges[fild.type][typeError]
+      function customMessege(typeError) {
+        const messesges = {
+          text: {
+            valueMissing: "Por favor, preencha este campo",
+          },
+          email: {
+            valueMissing: "Email é obrigatório",
+            typeMismatch: "Por favor, preencha um email válido",
+          },
+        };
+        return messesges[fild.type][typeError];
+      }
+
+      function setCustomMessege(messege) {
+        const spanError = fild.parentNode.querySelector("span.error");
+
+        if (messege) {
+          spanError.classList.add("active");
+          spanError.innerHTML = messege;
+        } else {
+          spanError.classList.remove("active");
+          spanError.innerHTML = "";
         }
+      }
 
-        function setCustomMessege(messege){
-                const spanError = fild.parentNode.querySelector("span.error")
+      return function () {
+        const error = verifyErros();
 
-                if (messege) {
-                    spanError.classList.add("active")
-                    spanError.innerHTML = messege
-                } else {
-                    spanError.classList.remove("active")
-                    spanError.innerHTML = ""
-                }
-            }
+        if (error) {
+          const messege = customMessege(error);
 
-                return function() {
-
-                    const error = verifyErros()
-                    
-                if(error) {
-                    const messege = customMessege(error)
-                    
-                    fild.style.borderColor = 'yellow'
-                    setCustomMessege("Campo Obrigatório")
-            }   else {
-                    fild.style.borderColor = 'green'
-                    setCustomMessege()
-            }
+          fild.style.borderColor = "yellow";
+          setCustomMessege("Campo Obrigatório");
+        } else {
+          fild.style.borderColor = "green";
+          setCustomMessege();
         }
+      };
     }
-          
+
     function custumValidation(event) {
+      // eliminar o bubble
+      event.preventDefault();
+
+      const fild = event.target;
+
+      const validation = Validatefild(fild);
+
+      validation();
+    }
+
+    for (fild of filds) {
+      fild.addEventListener("invalid", (event) => {
         // eliminar o bubble
-        event.preventDefault()
+        event.preventDefault();
 
-        const fild = event.target
-
-        const validation = Validatefild(fild)
-
-        validation()
-           
+        custumValidation(event);
+      });
+      fild.addEventListener("blur", custumValidation);
     }
 
+    document.querySelector("form").addEventListener("submit", (event) => {
+      console.log("dados do formulario escrito");
 
-        for (fild of filds){
-            fild.addEventListener("invalid", event => {
-                // eliminar o bubble
-                event.preventDefault()
-
-                custumValidation(event)
-            })
-            fild.addEventListener("blur", custumValidation)
-    }
-
-        document.querySelector("form").addEventListener("submit", (event) => {
-        console.log("dados do formulario escrito")
-        
-        // nao vai enviar o formulario
-        event.preventDefault()
-    })
-</script>
-
+      // nao vai enviar o formulario
+      event.preventDefault();
+    });
+  </script>
 </html>
