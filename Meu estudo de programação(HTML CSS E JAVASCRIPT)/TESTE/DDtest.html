@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Effect</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        background-image: url(./9eacacf70c64d83031f2d960e36abb4a.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
+      nav {
+        width: 250px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        border-radius: 10px;
+        box-shadow: 5px 7px 10px rgba(0, 0, 0, 5.5);
+      }
+
+      nav ul {
+        position: relative;
+        list-style: none;
+      }
+
+      nav ul li a {
+        display: flex;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.15rem;
+        text-transform: capitalize;
+        text-decoration: none;
+        color: rgb(24, 158, 192);
+        padding: 10px 30px;
+        height: 50px;
+        transition: 0.5s ease;
+        border-radius: 0 30px;
+      }
+
+      nav ul li a:hover {
+        background: rgba(0, 0, 0, 0.7);
+        color: #fff;
+      }
+
+      nav ul ul {
+        position: absolute;
+        left: 250px;
+        width: 200px;
+        top: 0;
+        background: rgba(40, 76, 236, 0.4);
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        display: none;
+      }
+
+      nav ul span {
+        position: absolute;
+        right: 20px;
+        font-size: 1.5rem;
+      }
+
+      nav ul .dropdown {
+        position: relative;
+      }
+
+      nav ul .dropdown:hover > ul {
+        display: initial;
+        background-image: url(./Power-infinity-stone-poster-style-3-cole-iba.jpg);
+      }
+      nav ul .dropdown_two ul {
+        position: absolute;
+        left: 200px;
+        top: 0;
+      }
+
+      nav ul .dropdown_two:hover ul {
+        display: initial;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="dropdown">
+          <a href="">File <span>&rsaquo;</span></a>
+          <ul>
+            <li class="dropdown_two">
+              <a href="">New file<span>&rsaquo;</span></a>
+              <ul>
+                <li><a href="">Link 1</a></li>
+                <li><a href="">Llink 2</a></li>
+                <li><a href="">Link 3</a></li>
+              </ul>
+            </li>
+            <li><a href=""> Open file</a></li>
+            <li><a href="">Open folder</a></li>
+            <li><a href="">Save</a></li>
+          </ul>
+        </li>
+        <li><a href="">Edit</a></li>
+        <li class="dropdown">
+          <a href="">Select <span>&rsaquo;</span></a>
+          <ul>
+            <li><a href="">Link 3</a></li>
+            <li><a href="">Link 3</a></li>
+            <li><a href="">Link 3</a></li>
+          </ul>
+        </li>
+        <li><a href="">tools</a></li>
+        <li><a href="">view</a></li>
+        <li><a href="">Phone</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

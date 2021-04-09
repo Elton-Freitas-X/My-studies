@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resposive Drop-down MENU BAR</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: rgb(197, 240, 240);
+      }
+
+      nav:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      nav div {
+        float: left;
+        font-size: 27px;
+        line-height: 91px;
+        padding-left: 60px;
+      }
+
+      nav ul {
+        float: right;
+        list-style: none;
+        position: relative;
+        margin-right: 60px;
+      }
+
+      nav ul li {
+        float: left;
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        line-height: 70px;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 600;
+        color: #023c5a;
+        padding: 8px 15px;
+      }
+
+      nav ul .lastchildren {
+        background: #ff3e7e;
+        height: 50px;
+        width: 144px;
+        text-align: center;
+        margin-top: 12px;
+        border-radius: 30px;
+      }
+
+      nav ul .lastchildren a {
+        color: #fff;
+        line-height: 48px;
+      }
+
+      nav ul .lastchildren a:hover {
+        color: rgb(245, 237, 237);
+      }
+
+      nav ul li a:hover {
+        transition-duration: 0.6s;
+        color: #ff3e7e;
+      }
+
+      nav ul ul li a:hover {
+        color: #ff3e7e;
+      }
+
+      nav ul ul {
+        position: absolute;
+        top: 85px;
+        visibility: hidden;
+        opacity: 0;
+        transition: top 0.4s;
+        height: 142px;
+        width: 170px;
+        background: #fff;
+      }
+
+      nav ul li:hover ul {
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      nav ul ul li {
+        position: relative;
+        margin: 0;
+        float: none;
+        display: list-item;
+        height: 36px;
+      }
+
+      nav ul ul li a {
+        line-height: 55px;
+      }
+
+      /* ********************* */
+
+      nav label span {
+        margin-left: 40px;
+        font-size: 30px;
+        color: #ff3e7e;
+      }
+
+      icon,
+      input {
+        display: none;
+      }
+
+      .show,
+      .icon,
+      input {
+        display: none;
+      }
+
+      @media all and (max-width: 990px) {
+        nav ul {
+          margin-right: 0px;
+          float: left;
+          background: #fff;
+          width: 80vw;
+          left: 9vw;
+        }
+
+        nav ul li a {
+          text-decoration: none;
+          font-family: none;
+          color: #000000;
+          font-weight: 100;
+          font-size: 15px;
+          padding: 7px 0px;
+          line-height: 70px;
+          cursor: pointer;
+        }
+
+        nav .logo {
+          padding-left: 30px;
+          width: 100%;
+        }
+
+        nav ul li,
+        nav ul ul li {
+          width: 100%;
+          display: block;
+        }
+
+        nav ul ul {
+          top: 70px;
+          float: none;
+          position: static;
+          display: none;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        nav ul ul li {
+          border-bottom: 0px;
+        }
+
+        nav li label.show span {
+          float: right;
+          margin-right: 30px;
+        }
+
+        nav ul ul a {
+          padding-left: 40px;
+        }
+
+        .show {
+          display: block;
+          font-size: 15px;
+          padding: 7px 10px;
+          line-height: 70px;
+          cursor: pointer;
+        }
+
+        .show:hover {
+          color: #ff3e7e;
+        }
+
+        .icon {
+          display: block;
+          position: absolute;
+          right: 40px;
+          line-height: 65px;
+          font-size: 25px;
+          cursor: pointer;
+        }
+
+        .show + a,
+        ul {
+          display: none;
+        }
+
+        [id^="btn"]:checked + ul {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img
+          src="https://preview.colorlib.com/theme/thepetcare/assets/img/logo/logo.png"
+          alt=""
+        />
+      </div>
+      <label for="btn" class="icon">
+        <span><i class="fa fa-bars"></i></span>
+      </label>
+      <input type="checkbox" id="btn" />
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Services</a></li>
+        <li><a href="">About</a></li>
+        <li>
+          <label for="btn-1" class="show">Blog <span>+</span></label>
+          <a href="">Blog</a>
+          <input type="checkbox" id="btn-1" />
+          <ul>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Blog Details</a></li>
+            <li><a href="">Elements</a></li>
+          </ul>
+        </li>
+        <li><a href="">Contact</a></li>
+        <li class="lastchildren"><a href="">Get Quote</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

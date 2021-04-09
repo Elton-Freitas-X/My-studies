@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resposive Drop-down MENU BAR</title>
+    <!-- COM HTML CSS (MEDIA QUERY) -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        color: white;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f2f2f2;
+      }
+      nav {
+        background: #1b1b1b;
+      }
+      nav:after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      nav .logo {
+        float: left;
+        color: white;
+        font-size: 27px;
+        font-weight: 600;
+        line-height: 70px;
+        padding-left: 60px;
+      }
+      nav ul {
+        float: right;
+        list-style: none;
+        margin-right: 40px;
+        position: relative;
+      }
+      nav ul li {
+        float: left;
+        display: inline-block;
+        background: black;
+        margin: 0 5px;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        line-height: 70px;
+        font-size: 18px;
+        padding: 8px 15px;
+      }
+
+      nav ul li a:hover {
+        transition-duration: 0.6s;
+        color: cyan;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #33ffff, 0 0 5px #66ffff;
+      }
+
+      nav ul ul li a:hover {
+        color: cyan;
+        box-shadow: none;
+      }
+
+      nav ul ul {
+        position: absolute;
+        top: 90px;
+        border-top: 3px solid cyan;
+        opacity: 0;
+        visibility: hidden;
+        transition: top 0.4s;
+      }
+
+      nav ul ul ul {
+        border-top: none;
+      }
+
+      nav ul li:hover > ul {
+        top: 70px;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      nav ul ul li {
+        position: relative;
+        margin: 0px;
+        width: 150px;
+        float: none;
+        display: list-item;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      }
+
+      nav ul ul li a {
+        line-height: 50px;
+      }
+
+      nav ul ul ul li {
+        position: relative;
+        top: -70px;
+        left: 150px;
+      }
+
+      .show,
+      input {
+        display: none;
+      }
+
+      nav label span {
+        margin-left: 40px;
+        font-size: 45px;
+      }
+
+      .show,
+      .icon,
+      input {
+        display: none;
+      }
+      /***********************/
+      /***********************/
+      @media all and (max-width: 968px) {
+        nav ul {
+          margin-right: 0px;
+          float: left;
+        }
+
+        nav .logo {
+          padding-left: 30px;
+          width: 100%;
+        }
+
+        nav ul li,
+        nav ul ul li {
+          display: block;
+          width: 100%;
+        }
+
+        nav ul ul {
+          top: 70px;
+          position: static;
+          border-top: none;
+          float: none;
+          display: none;
+          opacity: 1;
+          visibility: visible;
+        }
+
+        nav ul ul ul li {
+          position: static;
+        }
+
+        nav ul ul li {
+          border-bottom: 0px;
+        }
+
+        nav ul ul a {
+          padding-left: 40px;
+        }
+
+        nav ul ul ul a {
+          padding-left: 80px;
+        }
+
+        .show {
+          display: block;
+          color: white;
+          font-size: 18px;
+          padding: 0 20px;
+          line-height: 70px;
+          cursor: pointer;
+        }
+
+        .show:hover {
+          color: cyan;
+        }
+
+        .icon {
+          display: block;
+          color: white;
+          position: absolute;
+          right: 40px;
+          line-height: 70px;
+          font-size: 25px;
+          cursor: pointer;
+        }
+
+        nav .icon span i {
+          font-size: 31px;
+        }
+
+        nav ul a:hover {
+          box-shadow: none;
+        }
+
+        .show + a,
+        ul {
+          display: none;
+        }
+
+        [id^="btn"]:checked + ul {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">CodingNepal</div>
+      <label for="btn" class="icon">
+        <span> <i class="fa fa-bars"></i></span>
+      </label>
+      <input type="checkbox" id="btn" />
+      <ul>
+        <li><a href="">Home</a></li>
+        <li>
+          <label for="btn-1" class="show">Features +</label>
+          <a href="">Features</a>
+          <input type="checkbox" id="btn-1" />
+          <ul>
+            <li><a href="">Pages</a></li>
+            <li><a href="">Elements</a></li>
+            <li><a href="">Icons</a></li>
+          </ul>
+        </li>
+        <!-- sepaçao para melhor entendimento das aperturas e fechamento de tags -->
+        <li>
+          <label for="btn-2" class="show">Services +</label>
+          <a href="">Services</a>
+          <input type="checkbox" id="btn-2" />
+          <ul>
+            <li><a href="">Web Design</a></li>
+            <li><a href="">App Design</a></li>
+            <li>
+              <label for="btn-3" class="show">More +</label>
+              <a href="">More <span> + </span></a>
+              <input type="checkbox" id="btn-3" />
+              <ul>
+                <li><a href="">Submenu-1</a></li>
+                <li><a href="">Submenu-2</a></li>
+                <li><a href="">Submenu-3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
